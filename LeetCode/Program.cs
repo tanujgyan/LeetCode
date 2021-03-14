@@ -8,7 +8,8 @@ namespace LeetCode
         static void Main(string[] args)
         {
             //TwoSumDriverCode();
-            ReverseIntegerDriverCode();
+            //ReverseIntegerDriverCode();
+            PalindromeIntegerDriverCode();
         }
         static void TwoSumDriverCode()
         {
@@ -25,6 +26,11 @@ namespace LeetCode
             ReverseInteger reverseInteger = new ReverseInteger();
             Console.WriteLine(reverseInteger.ReverseIntegerUsingStringConversion((int)Math.Pow(2,33)));
             Console.WriteLine(reverseInteger.ReverseIntegerUsingStringConversionNoLINQ(-321));
+        }
+        static void PalindromeIntegerDriverCode()
+        {
+            PalindromeInteger palindromeInteger = new PalindromeInteger();
+            Console.WriteLine(palindromeInteger.IsPalindromeInteger(1234));
         }
     }
 }
