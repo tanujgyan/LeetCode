@@ -28,6 +28,12 @@ namespace LeetCode
             }
             return result;
         }
+        /// <summary>
+        /// This has a time complexity of O(n)
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <param name="target"></param>
+        /// <returns></returns>
         public int[] TwoSumCalculatorUsingDictionary(int[] nums, int target)
         {
             int[] result = new int[2];
