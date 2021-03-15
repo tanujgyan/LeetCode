@@ -9,7 +9,8 @@ namespace LeetCode
         {
             //TwoSumDriverCode();
             //ReverseIntegerDriverCode();
-            PalindromeIntegerDriverCode();
+            //PalindromeIntegerDriverCode();
+            RomanNumeralsDriverCode();
         }
         static void TwoSumDriverCode()
         {
@@ -24,13 +25,18 @@ namespace LeetCode
         static void ReverseIntegerDriverCode()
         {
             ReverseInteger reverseInteger = new ReverseInteger();
-            Console.WriteLine(reverseInteger.ReverseIntegerUsingStringConversion((int)Math.Pow(2,33)));
+            Console.WriteLine(reverseInteger.ReverseIntegerUsingStringConversion((int)Math.Pow(2, 33)));
             Console.WriteLine(reverseInteger.ReverseIntegerUsingStringConversionNoLINQ(-321));
         }
         static void PalindromeIntegerDriverCode()
         {
             PalindromeInteger palindromeInteger = new PalindromeInteger();
             Console.WriteLine(palindromeInteger.IsPalindromeInteger(1234));
+        }
+        static void RomanNumeralsDriverCode()
+        {
+            RomanNumerals romanNumerals = new RomanNumerals();
+            Console.WriteLine(romanNumerals.RomanToInt("MDCXCV"));
         }
     }
 }
