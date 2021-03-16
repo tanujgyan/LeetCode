@@ -10,7 +10,9 @@ namespace LeetCode
             //TwoSumDriverCode();
             //ReverseIntegerDriverCode();
             //PalindromeIntegerDriverCode();
-            RomanNumeralsDriverCode();
+            //RomanNumeralsDriverCode();
+            //FindLongestCommonPrefixDriverCode();
+            ValidParenthesesDriverCode();
         }
         static void TwoSumDriverCode()
         {
@@ -37,6 +39,16 @@ namespace LeetCode
         {
             RomanNumerals romanNumerals = new RomanNumerals();
             Console.WriteLine(romanNumerals.RomanToInt("MDCXCV"));
+        }
+        static void FindLongestCommonPrefixDriverCode()
+        {
+            LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
+          Console.WriteLine(longestCommonPrefix.FindLongestCommonPrefix(new string[] { "ab","a" }));
+        }
+        static void ValidParenthesesDriverCode()
+        {
+            ValidParentheses validParentheses = new ValidParentheses();
+            Console.WriteLine(validParentheses.CheckIfValidParentheses("["));
         }
     }
 }
