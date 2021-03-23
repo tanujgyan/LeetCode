@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace LeetCode
@@ -12,7 +13,8 @@ namespace LeetCode
             //PalindromeIntegerDriverCode();
             //RomanNumeralsDriverCode();
             //FindLongestCommonPrefixDriverCode();
-            ValidParenthesesDriverCode();
+            //ValidParenthesesDriverCode();
+            MergeSortedListsDriverCode();
         }
         static void TwoSumDriverCode()
         {
@@ -43,12 +45,20 @@ namespace LeetCode
         static void FindLongestCommonPrefixDriverCode()
         {
             LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
-          Console.WriteLine(longestCommonPrefix.FindLongestCommonPrefix(new string[] { "ab","a" }));
+            Console.WriteLine(longestCommonPrefix.FindLongestCommonPrefix(new string[] { "ab", "a" }));
         }
         static void ValidParenthesesDriverCode()
         {
             ValidParentheses validParentheses = new ValidParentheses();
             Console.WriteLine(validParentheses.CheckIfValidParentheses("["));
+        }
+        static void MergeSortedListsDriverCode()
+        {
+            MergeSortedList mergeSortedList = new MergeSortedList();
+            mergeSortedList.CreateSampleList(new Queue<int>(),mergeSortedList.l1);
+            mergeSortedList.CreateSampleList(new Queue<int>(), mergeSortedList.l2);
+            mergeSortedList.MergeTwoLists(mergeSortedList.l1, mergeSortedList.l2);
+
         }
     }
 }
