@@ -14,7 +14,8 @@ namespace LeetCode
             //RomanNumeralsDriverCode();
             //FindLongestCommonPrefixDriverCode();
             //ValidParenthesesDriverCode();
-            MergeSortedListsDriverCode();
+            //MergeSortedListsDriverCode();
+            RemoveDuplicatesFromSortedArrayDriverCode();
         }
         static void TwoSumDriverCode()
         {
@@ -55,10 +56,15 @@ namespace LeetCode
         static void MergeSortedListsDriverCode()
         {
             MergeSortedList mergeSortedList = new MergeSortedList();
-            mergeSortedList.CreateSampleList(new Queue<int>(),mergeSortedList.l1);
+            mergeSortedList.CreateSampleList(new Queue<int>(), mergeSortedList.l1);
             mergeSortedList.CreateSampleList(new Queue<int>(), mergeSortedList.l2);
             mergeSortedList.MergeTwoLists(mergeSortedList.l1, mergeSortedList.l2);
 
+        }
+        static void RemoveDuplicatesFromSortedArrayDriverCode()
+        {
+            RemoveDuplicatesFromSortedArray removeDuplicatesFromSortedArray = new RemoveDuplicatesFromSortedArray();
+            removeDuplicatesFromSortedArray.RemoveDuplicates(new int[] {1,1,1,1,1,2 });
         }
     }
 }
