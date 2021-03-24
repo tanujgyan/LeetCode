@@ -15,7 +15,8 @@ namespace LeetCode
             //FindLongestCommonPrefixDriverCode();
             //ValidParenthesesDriverCode();
             //MergeSortedListsDriverCode();
-            RemoveDuplicatesFromSortedArrayDriverCode();
+            //RemoveDuplicatesFromSortedArrayDriverCode();
+            RemoveElementDriverCode();
         }
         static void TwoSumDriverCode()
         {
@@ -64,7 +65,12 @@ namespace LeetCode
         static void RemoveDuplicatesFromSortedArrayDriverCode()
         {
             RemoveDuplicatesFromSortedArray removeDuplicatesFromSortedArray = new RemoveDuplicatesFromSortedArray();
-            removeDuplicatesFromSortedArray.RemoveDuplicates(new int[] {1,1,1,1,1,2 });
+            removeDuplicatesFromSortedArray.RemoveDuplicates(new int[] { 1, 1, 1, 1, 1, 2 });
+        }
+        static void RemoveElementDriverCode()
+        {
+            RemoveElement removeElementDriverCode = new RemoveElement();
+            removeElementDriverCode.RemoveElementMethod(new int[] { 3,3 }, 5);
         }
     }
 }
