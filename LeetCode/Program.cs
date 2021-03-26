@@ -16,7 +16,8 @@ namespace LeetCode
             //ValidParenthesesDriverCode();
             //MergeSortedListsDriverCode();
             //RemoveDuplicatesFromSortedArrayDriverCode();
-            RemoveElementDriverCode();
+           //RemoveElementDriverCode();
+            ImplementstrStrDriverCode();
         }
         static void TwoSumDriverCode()
         {
@@ -70,7 +71,12 @@ namespace LeetCode
         static void RemoveElementDriverCode()
         {
             RemoveElement removeElementDriverCode = new RemoveElement();
-            removeElementDriverCode.RemoveElementMethod(new int[] { 3,3 }, 5);
+            removeElementDriverCode.RemoveElementMethod(new int[] { 3, 3 }, 5);
+        }
+        static void ImplementstrStrDriverCode()
+        {
+            ImplementstrStr implementstrStr = new ImplementstrStr();
+            Console.WriteLine(implementstrStr.StrStr("a", "a")); 
         }
     }
 }
