@@ -17,7 +17,8 @@ namespace LeetCode
             //MergeSortedListsDriverCode();
             //RemoveDuplicatesFromSortedArrayDriverCode();
            //RemoveElementDriverCode();
-            ImplementstrStrDriverCode();
+          //  ImplementstrStrDriverCode();
+            SearchInsertPositionDriverCode();
         }
         static void TwoSumDriverCode()
         {
@@ -77,6 +78,11 @@ namespace LeetCode
         {
             ImplementstrStr implementstrStr = new ImplementstrStr();
             Console.WriteLine(implementstrStr.StrStr("a", "a")); 
+        }
+        static void SearchInsertPositionDriverCode()
+        {
+            SearchInsertPosition searchInsertPosition = new SearchInsertPosition();
+            Console.WriteLine(searchInsertPosition.SearchInsert(new int[] { 1 },0));
         }
     }
 }
