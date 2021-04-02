@@ -16,10 +16,15 @@ namespace LeetCode
             //ValidParenthesesDriverCode();
             //MergeSortedListsDriverCode();
             //RemoveDuplicatesFromSortedArrayDriverCode();
-           //RemoveElementDriverCode();
-          //  ImplementstrStrDriverCode();
-            SearchInsertPositionDriverCode();
+            //RemoveElementDriverCode();
+            //  ImplementstrStrDriverCode();
+            //SearchInsertPositionDriverCode();
+            //LengthOfLastWordClassDriverCode();
+            PlusOneDriverCode();
         }
+
+
+
         static void TwoSumDriverCode()
         {
             TwoSum twoSum = new TwoSum();
@@ -77,12 +82,23 @@ namespace LeetCode
         static void ImplementstrStrDriverCode()
         {
             ImplementstrStr implementstrStr = new ImplementstrStr();
-            Console.WriteLine(implementstrStr.StrStr("a", "a")); 
+            Console.WriteLine(implementstrStr.StrStr("a", "a"));
         }
         static void SearchInsertPositionDriverCode()
         {
             SearchInsertPosition searchInsertPosition = new SearchInsertPosition();
-            Console.WriteLine(searchInsertPosition.SearchInsert(new int[] { 1 },0));
+            Console.WriteLine(searchInsertPosition.SearchInsert(new int[] { 1 }, 0));
         }
-    }
+        static void LengthOfLastWordClassDriverCode()
+        {
+            LengthOfLastWordClass lengthOfLastWordClass = new LengthOfLastWordClass();
+            Console.WriteLine(lengthOfLastWordClass.LengthOfLastWord("Hello World  ")); 
+        }
+        static void PlusOneDriverCode()
+        {
+            PlusOne plusOne = new PlusOne();
+            var result = plusOne.PlusOneMethod(new int[] { 9, 9 });
+           result.ToList().ForEach(x => Console.WriteLine(x));
+        }
+        }
 }
