@@ -20,10 +20,22 @@ namespace LeetCode
             //  ImplementstrStrDriverCode();
             //SearchInsertPositionDriverCode();
             //LengthOfLastWordClassDriverCode();
-            PlusOneDriverCode();
+            //PlusOneDriverCode();
+            //AddBinaryDriverCode();
+            SquareRootDriverCode();
         }
 
+        private static void SquareRootDriverCode()
+        {
+            SquareRoot squareRoot = new SquareRoot();
+            Console.WriteLine(squareRoot.Sqrt(8)); 
+        }
 
+        private static void AddBinaryDriverCode()
+        {
+            AddBinary addBinary = new AddBinary();
+            Console.WriteLine(addBinary.AddBinaryMethod("11", "1")); 
+        }
 
         static void TwoSumDriverCode()
         {
