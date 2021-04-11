@@ -24,7 +24,14 @@ namespace LeetCode
             //AddBinaryDriverCode();
             //SquareRootDriverCode();
            //ClimbingStairsDriverCode();
-            RemoveDuplicateFromSortedListDriverCode();
+            //RemoveDuplicateFromSortedListDriverCode();
+            MergeSortedArrayClassDriverCode();
+        }
+
+        private static void MergeSortedArrayClassDriverCode()
+        {
+            MergeSortedArrayClass mergeSortedArrayClass = new MergeSortedArrayClass();
+            mergeSortedArrayClass.Merge(new int[6] { 1, 2, 3, 0, 0, 0 }, 3, new int[3] { 2,5,6 }, 3);
         }
 
         private static void RemoveDuplicateFromSortedListDriverCode()
