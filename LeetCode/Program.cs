@@ -22,7 +22,22 @@ namespace LeetCode
             //LengthOfLastWordClassDriverCode();
             //PlusOneDriverCode();
             //AddBinaryDriverCode();
-            SquareRootDriverCode();
+            //SquareRootDriverCode();
+           //ClimbingStairsDriverCode();
+            RemoveDuplicateFromSortedListDriverCode();
+        }
+
+        private static void RemoveDuplicateFromSortedListDriverCode()
+        {
+            RemoveDuplicateFromSortedList removeDuplicateFromSortedList = new RemoveDuplicateFromSortedList();
+            removeDuplicateFromSortedList.CreateSampleList(new Queue<int>(new int[] { 1, 1, 2, 3, 3 }), removeDuplicateFromSortedList.l);
+            removeDuplicateFromSortedList.DeleteDuplicates(removeDuplicateFromSortedList.l);
+        }
+
+        private static void ClimbingStairsDriverCode()
+        {
+            ClimbingStairs climbingStairs = new ClimbingStairs();
+            Console.WriteLine(climbingStairs.ClimbStairs(3));
         }
 
         private static void SquareRootDriverCode()
