@@ -25,8 +25,28 @@ namespace LeetCode
             //SquareRootDriverCode();
            //ClimbingStairsDriverCode();
             //RemoveDuplicateFromSortedListDriverCode();
-            MergeSortedArrayClassDriverCode();
+            //MergeSortedArrayClassDriverCode();
+            SameTreeClassDriverCode();
         }
+
+        private static void SameTreeClassDriverCode()
+        {
+            SameTreeClass sameTreeClass = new SameTreeClass();
+            TreeNode tree1 = new TreeNode();
+            tree1.val = 0;
+            tree1.left = new TreeNode();
+            tree1.left.val = 1;
+            //tree1.right = new TreeNode();
+            //tree1.right.val = 3;
+            TreeNode tree2 = new TreeNode();
+            tree2.val = 0;
+            tree2.left = new TreeNode();
+            tree2.left.val = 1;
+            //tree2.right = new TreeNode();
+            //tree2.right.val = 3;
+            sameTreeClass.IsSameTree(tree1, tree2);
+        }
+    
 
         private static void MergeSortedArrayClassDriverCode()
         {
