@@ -26,8 +26,15 @@ namespace LeetCode
            //ClimbingStairsDriverCode();
             //RemoveDuplicateFromSortedListDriverCode();
             //MergeSortedArrayClassDriverCode();
-            SameTreeClassDriverCode();
-            PascalTriangleClassDriverCode();
+            //SameTreeClassDriverCode();
+            //PascalTriangleClassDriverCode();
+            BuySellStockClassDriverCode();
+        }
+
+        private static void BuySellStockClassDriverCode()
+        {
+            BuySellStockClass buySellStockClass = new BuySellStockClass();
+            buySellStockClass.MaxProfit(new int[] { 7, 6, 4, 3, 1 });
         }
 
         private static void PascalTriangleClassDriverCode()
