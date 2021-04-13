@@ -27,6 +27,13 @@ namespace LeetCode
             //RemoveDuplicateFromSortedListDriverCode();
             //MergeSortedArrayClassDriverCode();
             SameTreeClassDriverCode();
+            PascalTriangleClassDriverCode();
+        }
+
+        private static void PascalTriangleClassDriverCode()
+        {
+            PascalTriangleClass pascalTriangleClass = new PascalTriangleClass();
+            pascalTriangleClass.Generate(5);
         }
 
         private static void SameTreeClassDriverCode()
