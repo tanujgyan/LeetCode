@@ -31,5 +31,30 @@ namespace LeetCode
             }
             return list;
         }
+        public IList<int> GetRow(int rowIndex)
+        {
+            List<IList<int>> list = new List<IList<int>>();
+            list.Add(new List<int>() { 1 });
+            for (int i = 1; i < rowIndex+1; i++)
+            {
+                list.Add(new List<int>());
+                for (int j = 0; j <= i; j++)
+                {
+                    if (j - 1 >= 0 && list[i - 1].Count > j)
+                    {
+                        list[i].Add(list[i - 1][j] + list[i - 1][j - 1]);
+                    }
+                    else if (i == j || j == 0)
+                    {
+                        list[i].Add(1);
+                    }
+                    else
+                    {
+                        list[i].Add(list[i - 1][j]);
+                    }
+                }
+            }
+            return list[rowIndex];
+        }
     }
 }

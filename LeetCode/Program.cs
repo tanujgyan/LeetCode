@@ -34,6 +34,7 @@ namespace LeetCode
         {
             PascalTriangleClass pascalTriangleClass = new PascalTriangleClass();
             pascalTriangleClass.Generate(5);
+            pascalTriangleClass.GetRow(5);
         }
 
         private static void SameTreeClassDriverCode()
