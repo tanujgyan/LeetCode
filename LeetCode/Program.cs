@@ -28,7 +28,21 @@ namespace LeetCode
             //MergeSortedArrayClassDriverCode();
             //SameTreeClassDriverCode();
             //PascalTriangleClassDriverCode();
-            BuySellStockClassDriverCode();
+            //BuySellStockClassDriverCode();
+            //BuySellStock2ClassDriverCode();
+            ValidPalindromeClassDriverCode();
+        }
+
+        private static void ValidPalindromeClassDriverCode()
+        {
+            ValidPalindromeClass validPalindromeClass = new ValidPalindromeClass();
+            validPalindromeClass.IsPalindrome("A man, a plan, a canal: Panama");
+        }
+
+        private static void BuySellStock2ClassDriverCode()
+        {
+            BuySellStock2Class buySellStock2Class = new BuySellStock2Class();
+            buySellStock2Class.MaxProfit(new int[] { 7, 1, 5, 3, 6, 15 });
         }
 
         private static void BuySellStockClassDriverCode()
