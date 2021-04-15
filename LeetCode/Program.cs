@@ -31,6 +31,13 @@ namespace LeetCode
             //BuySellStockClassDriverCode();
             //BuySellStock2ClassDriverCode();
             ValidPalindromeClassDriverCode();
+            ContainerWithMostWaterDriverCode();
+        }
+
+        private static void ContainerWithMostWaterDriverCode()
+        {
+            ContainerWithMostWater containerWithMostWater = new ContainerWithMostWater();
+            Console.WriteLine(containerWithMostWater.MaxArea(new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 })  ); 
         }
 
         private static void ValidPalindromeClassDriverCode()
