@@ -32,7 +32,21 @@ namespace LeetCode
             //BuySellStock2ClassDriverCode();
             //ValidPalindromeClassDriverCode();
             // ContainerWithMostWaterDriverCode();
-            TwoSumArraySortedInputDriverCode();
+            //TwoSumArraySortedInputDriverCode();
+           //ExcelSheetColumnTitleDriverCode();
+            ExcelSheetColumnNumberDriverCode();
+        }
+
+        private static void ExcelSheetColumnNumberDriverCode()
+        {
+            ExcelSheetColumnNumber excelSheetColumnNumber = new ExcelSheetColumnNumber();
+            excelSheetColumnNumber.TitleToNumber("ZY");
+        }
+
+        private static void ExcelSheetColumnTitleDriverCode()
+        {
+            ExcelSheetColumnTitle excelSheetColumnTitle = new ExcelSheetColumnTitle();
+            Console.WriteLine(excelSheetColumnTitle.ConvertToTitle(586)); 
         }
 
         private static void TwoSumArraySortedInputDriverCode()
