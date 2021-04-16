@@ -34,7 +34,14 @@ namespace LeetCode
             // ContainerWithMostWaterDriverCode();
             //TwoSumArraySortedInputDriverCode();
            //ExcelSheetColumnTitleDriverCode();
-            ExcelSheetColumnNumberDriverCode();
+            //ExcelSheetColumnNumberDriverCode();
+            MajorityElementClassDriverCode();
+        }
+
+        private static void MajorityElementClassDriverCode()
+        {
+            MajorityElementClass majorityElementClass = new MajorityElementClass();
+            Console.WriteLine(majorityElementClass.MajorityElement(new int[] { 2, 2, 1, 1, 1, 2, 2 })); 
         }
 
         private static void ExcelSheetColumnNumberDriverCode()
