@@ -36,6 +36,13 @@ namespace LeetCode
            //ExcelSheetColumnTitleDriverCode();
             //ExcelSheetColumnNumberDriverCode();
             MajorityElementClassDriverCode();
+            RemoveAllAdjacentDuplicatesInString2DriverCode();
+        }
+
+        private static void RemoveAllAdjacentDuplicatesInString2DriverCode()
+        {
+            RemoveAllAdjacentDuplicatesInString2 removeAllAdjacentDuplicatesInString2 = new RemoveAllAdjacentDuplicatesInString2();
+            removeAllAdjacentDuplicatesInString2.RemoveDuplicates("pbbcggttciiippooaais", 2);
         }
 
         private static void MajorityElementClassDriverCode()
