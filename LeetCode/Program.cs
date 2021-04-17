@@ -37,7 +37,14 @@ namespace LeetCode
             //ExcelSheetColumnNumberDriverCode();
             //MajorityElementClassDriverCode();
             //RemoveAllAdjacentDuplicatesInString2DriverCode();
-            ContainsDuplicateClassDriverCode();
+           // ContainsDuplicateClassDriverCode();
+            MinDeletionUniqueStringDriverCode();
+        }
+
+        private static void MinDeletionUniqueStringDriverCode()
+        {
+            MinDeletionUniqueString minDeletionUniqueString = new MinDeletionUniqueString();
+            minDeletionUniqueString.MinDeletions("hogdheejnglfmaidocafjngkf");
         }
 
         private static void ContainsDuplicateClassDriverCode()
