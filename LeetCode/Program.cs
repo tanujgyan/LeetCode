@@ -35,8 +35,15 @@ namespace LeetCode
             //TwoSumArraySortedInputDriverCode();
            //ExcelSheetColumnTitleDriverCode();
             //ExcelSheetColumnNumberDriverCode();
-            MajorityElementClassDriverCode();
-            RemoveAllAdjacentDuplicatesInString2DriverCode();
+            //MajorityElementClassDriverCode();
+            //RemoveAllAdjacentDuplicatesInString2DriverCode();
+            ContainsDuplicateClassDriverCode();
+        }
+
+        private static void ContainsDuplicateClassDriverCode()
+        {
+            ContainsDuplicateClass containsDuplicateClass = new ContainsDuplicateClass();
+            containsDuplicateClass.ContainsDuplicate(new int[] { 1, 2, 3, 1 });
         }
 
         private static void RemoveAllAdjacentDuplicatesInString2DriverCode()
