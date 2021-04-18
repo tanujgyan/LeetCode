@@ -1,6 +1,7 @@
 ﻿using LeetCode.Microsoft_Interview_Questions;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace LeetCode
@@ -40,8 +41,26 @@ namespace LeetCode
             //RemoveAllAdjacentDuplicatesInString2DriverCode();
            // ContainsDuplicateClassDriverCode();
             //MinDeletionUniqueStringDriverCode();
-            MinAdjacentSwapsToMakePalindromeDriverCode();
-            NumberOfGoodPairsDriverCode();
+            //MinAdjacentSwapsToMakePalindromeDriverCode();
+            //NumberOfGoodPairsDriverCode();
+           // LongestSubstringWithoutRepeatingCharactersDriverCode();
+            GridTravellerProblemDriverCode();
+        }
+
+        private static void GridTravellerProblemDriverCode()
+        {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            GridTravellerProblem gridTravellerProblem = new GridTravellerProblem();
+            Console.WriteLine(gridTravellerProblem.UniquePaths(3, 7));
+            stopwatch.Stop();
+            Console.WriteLine(stopwatch.ElapsedMilliseconds);
+        }
+
+        private static void LongestSubstringWithoutRepeatingCharactersDriverCode()
+        {
+            LongestSubstringWithoutRepeatingCharacters longestSubstringWithoutRepeatingCharacters = new LongestSubstringWithoutRepeatingCharacters();
+            longestSubstringWithoutRepeatingCharacters.LengthOfLongestSubstring("abcdcefgh");
         }
 
         private static void NumberOfGoodPairsDriverCode()
