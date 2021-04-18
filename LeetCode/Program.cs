@@ -35,17 +35,24 @@ namespace LeetCode
             //ValidPalindromeClassDriverCode();
             // ContainerWithMostWaterDriverCode();
             //TwoSumArraySortedInputDriverCode();
-           //ExcelSheetColumnTitleDriverCode();
+            //ExcelSheetColumnTitleDriverCode();
             //ExcelSheetColumnNumberDriverCode();
             //MajorityElementClassDriverCode();
             //RemoveAllAdjacentDuplicatesInString2DriverCode();
-           // ContainsDuplicateClassDriverCode();
+            // ContainsDuplicateClassDriverCode();
             //MinDeletionUniqueStringDriverCode();
             //MinAdjacentSwapsToMakePalindromeDriverCode();
             //NumberOfGoodPairsDriverCode();
-           // LongestSubstringWithoutRepeatingCharactersDriverCode();
-            GridTravellerProblemDriverCode();
-            RemoveNthNodeFromLastDriverCode();
+            // LongestSubstringWithoutRepeatingCharactersDriverCode();
+            //GridTravellerProblemDriverCode();
+            //RemoveNthNodeFromLastDriverCode();
+            ContainsDuplicate2ClassDriverCode();
+        }
+
+        private static void ContainsDuplicate2ClassDriverCode()
+        {
+            ContainsDuplicate2Class containsDuplicate2Class = new ContainsDuplicate2Class();
+            containsDuplicate2Class.ContainsNearbyDuplicate(new int[] { 1,0,1,1 }, 1);
         }
 
         private static void RemoveNthNodeFromLastDriverCode()
