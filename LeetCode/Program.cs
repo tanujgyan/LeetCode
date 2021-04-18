@@ -45,6 +45,14 @@ namespace LeetCode
             //NumberOfGoodPairsDriverCode();
            // LongestSubstringWithoutRepeatingCharactersDriverCode();
             GridTravellerProblemDriverCode();
+            RemoveNthNodeFromLastDriverCode();
+        }
+
+        private static void RemoveNthNodeFromLastDriverCode()
+        {
+            RemoveNthNodeFromLast removeNthNodeFromLast = new RemoveNthNodeFromLast();
+            removeNthNodeFromLast.CreateSampleList(new Queue<int>(new[] { 1,2,3,4,5}),removeNthNodeFromLast.l1);
+            removeNthNodeFromLast.RemoveNthFromEnd(removeNthNodeFromLast.l1, 2);
         }
 
         private static void GridTravellerProblemDriverCode()
