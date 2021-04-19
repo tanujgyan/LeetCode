@@ -49,7 +49,20 @@ namespace LeetCode
             // ContainsDuplicate2ClassDriverCode();
             //LetterCombinationsOfPhoneNumberDriverCode();
             //DFSGraphDriverCode();
-            EmployeeImportanceClassDriverCode();
+           //EmployeeImportanceClassDriverCode();
+            MinStackDriverCode();
+        }
+
+        private static void MinStackDriverCode()
+        {
+            MinStack obj = new MinStack();
+            obj.Push(-2);
+            obj.Push(0);
+            obj.Push(-3);
+            int param_1= obj.GetMin();
+            obj.Pop();
+            int param_3 = obj.Top();
+            int param_4 = obj.GetMin();
         }
 
         private static void EmployeeImportanceClassDriverCode()
