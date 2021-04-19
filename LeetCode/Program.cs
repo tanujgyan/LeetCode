@@ -46,8 +46,64 @@ namespace LeetCode
             // LongestSubstringWithoutRepeatingCharactersDriverCode();
             //GridTravellerProblemDriverCode();
             //RemoveNthNodeFromLastDriverCode();
-           // ContainsDuplicate2ClassDriverCode();
-            LetterCombinationsOfPhoneNumberDriverCode();
+            // ContainsDuplicate2ClassDriverCode();
+            //LetterCombinationsOfPhoneNumberDriverCode();
+            //DFSGraphDriverCode();
+            EmployeeImportanceClassDriverCode();
+        }
+
+        private static void EmployeeImportanceClassDriverCode()
+        {
+            List<Employee> employees = new List<Employee>();
+            
+            employees.Add(new Employee { id = 1, importance = 50, subordinates = new List<int> { 2 } });
+            employees.Add(new Employee { id = 2, importance = 89, subordinates = new List<int>() {3} });
+            employees.Add(new Employee { id = 3, importance = 69, subordinates = new List<int>() { 4 } });
+            employees.Add(new Employee { id = 4, importance = 52, subordinates = new List<int>() { 5, 26 } });
+            employees.Add(new Employee { id = 5, importance = 78, subordinates = new List<int>() { 6, 7 } });
+            employees.Add(new Employee { id = 6, importance = 63, subordinates = new List<int>() { } });
+            employees.Add(new Employee { id = 7, importance = 55, subordinates = new List<int>() {8 } });
+            employees.Add(new Employee { id = 8, importance = 88, subordinates = new List<int>() {9,25 } });
+            employees.Add(new Employee { id = 9, importance = 64, subordinates = new List<int>() {10 } });
+            employees.Add(new Employee { id = 10, importance = 54, subordinates = new List<int>() { 11,19} });
+            employees.Add(new Employee { id = 11, importance = 81, subordinates = new List<int>() { 12} });
+            employees.Add(new Employee { id = 12, importance = 83, subordinates = new List<int>() { 13,18} });
+            employees.Add(new Employee { id = 13, importance = 58, subordinates = new List<int>() { 14,15} });
+            employees.Add(new Employee { id = 14, importance = 64, subordinates = new List<int>() { } });
+            employees.Add(new Employee { id = 15, importance = 97, subordinates = new List<int>() { 16} });
+            employees.Add(new Employee { id = 16, importance = 67, subordinates = new List<int>() { 17} });
+            employees.Add(new Employee { id = 17, importance = 56, subordinates = new List<int>() { } });
+            employees.Add(new Employee { id = 18, importance = 64, subordinates = new List<int>() { } });
+            employees.Add(new Employee { id = 19, importance = 95, subordinates = new List<int>() { 20,23} });
+            employees.Add(new Employee { id = 20, importance = 70, subordinates = new List<int>() { 21,22} });
+            employees.Add(new Employee { id = 21, importance = 74, subordinates = new List<int>() { } });
+            employees.Add(new Employee { id = 22, importance = 95, subordinates = new List<int>() { } });
+            employees.Add(new Employee { id = 23, importance = 56, subordinates = new List<int>() {24 } });
+            employees.Add(new Employee { id = 24, importance = 100, subordinates = new List<int>() { } });
+            employees.Add(new Employee { id = 25, importance = 69, subordinates = new List<int>() { } });
+            employees.Add(new Employee { id = 26, importance = 98, subordinates = new List<int>() { } });
+            EmployeeImportanceClass employeeImportanceClass = new EmployeeImportanceClass();
+            //employeeImportanceClass.AddToStack(employees, 1);
+           employeeImportanceClass.GetImportance(employees, 1);
+        }
+
+        private static void DFSGraphDriverCode()
+        {
+            DFSGraph g = new DFSGraph(4);
+
+            g.AddEdge(0, 1);
+            g.AddEdge(0, 2);
+            g.AddEdge(1, 2);
+            g.AddEdge(2, 0);
+            g.AddEdge(2, 3);
+            g.AddEdge(3, 3);
+
+            Console.WriteLine(
+                "Following is Depth First Traversal "
+                + "(starting from vertex 2)");
+
+            g.DFS(2);
+            Console.ReadKey();
         }
 
         private static void LetterCombinationsOfPhoneNumberDriverCode()
