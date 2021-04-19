@@ -50,7 +50,28 @@ namespace LeetCode
             //LetterCombinationsOfPhoneNumberDriverCode();
             //DFSGraphDriverCode();
            //EmployeeImportanceClassDriverCode();
-            MinStackDriverCode();
+            //MinStackDriverCode();
+            //ThirdMaxClassDriverCode();
+            CanPlaceFlowersClassDriverCode();
+            MountainArrayClassDriverCode();
+        }
+
+        private static void MountainArrayClassDriverCode()
+        {
+            MountainArrayClass mountainArrayClass = new MountainArrayClass();
+            mountainArrayClass.ValidMountainArray(new int[] {5,6,7,8,6 });
+        }
+
+        private static void CanPlaceFlowersClassDriverCode()
+        {
+            CanPlaceFlowersClass canPlaceFlowersClass = new CanPlaceFlowersClass();
+            canPlaceFlowersClass.CanPlaceFlowers(new int[] { 1 }, 0);
+        }
+
+        private static void ThirdMaxClassDriverCode()
+        {
+            ThirdMaxClass thirdMaxClass = new ThirdMaxClass();
+            thirdMaxClass.ThirdMax(new int[] { 1, 2, 2, 5, 3, 5});
         }
 
         private static void MinStackDriverCode()
