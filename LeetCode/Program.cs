@@ -1,4 +1,5 @@
-﻿using LeetCode.Microsoft_Interview_Questions;
+﻿using LeetCode.Amazon_Interview_Questions;
+using LeetCode.Microsoft_Interview_Questions;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -54,7 +55,16 @@ namespace LeetCode
             //ThirdMaxClassDriverCode();
             //CanPlaceFlowersClassDriverCode();
             // MountainArrayClassDriverCode();
-            X_Of_a_Kind_In_Deck_DriverCode();
+           // X_Of_a_Kind_In_Deck_DriverCode();
+            MostCommonWordDriverCode();
+        }
+
+        private static void MostCommonWordDriverCode()
+        {
+            MostCommonWordClass mostCommonWord = new MostCommonWordClass();
+           // mostCommonWord.MostCommonWord("ball.toy ,        roy roy!", new string[] { " " });
+            //mostCommonWord.MostCommonWordAttempt2("ball.toy ,        roy roy!", new string[] { " " });
+            mostCommonWord.MostCommonWordAttempt2("a, a, a, a, b,b,b,c, c", new string[] { "a" });
         }
 
         private static void X_Of_a_Kind_In_Deck_DriverCode()
@@ -324,10 +334,10 @@ namespace LeetCode
         static void TwoSumDriverCode()
         {
             TwoSum twoSum = new TwoSum();
-            int[] nums = new int[] { 3, 4, -3, 90 };
+            int[] nums = new int[] { 3,3,6 };
             int target = 0;
             var result = twoSum.TwoSumCalculator(nums, target);
-            var dictResult = twoSum.TwoSumCalculatorUsingDictionary(nums, target);
+            var dictResult = twoSum.TwoSumCalculatorUsingDictionary(nums, 3);
             result.ToList().ForEach(x => Console.WriteLine(x));
             dictResult.ToList().ForEach(x => Console.WriteLine(x));
         }
