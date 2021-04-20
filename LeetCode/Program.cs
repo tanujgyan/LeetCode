@@ -49,11 +49,21 @@ namespace LeetCode
             // ContainsDuplicate2ClassDriverCode();
             //LetterCombinationsOfPhoneNumberDriverCode();
             //DFSGraphDriverCode();
-           //EmployeeImportanceClassDriverCode();
+            //EmployeeImportanceClassDriverCode();
             //MinStackDriverCode();
             //ThirdMaxClassDriverCode();
-            CanPlaceFlowersClassDriverCode();
-            MountainArrayClassDriverCode();
+            //CanPlaceFlowersClassDriverCode();
+            // MountainArrayClassDriverCode();
+            X_Of_a_Kind_In_Deck_DriverCode();
+        }
+
+        private static void X_Of_a_Kind_In_Deck_DriverCode()
+        {
+            X_Of_a_Kind_In_Deck x_Of_A_Kind_In_Deck = new X_Of_a_Kind_In_Deck();
+            //x_Of_A_Kind_In_Deck.HasGroupsSizeX(new int[] { 1, 1, 2, 2, 2, 2 }); //positive test case
+            //x_Of_A_Kind_In_Deck.HasGroupsSizeX(new int[] { 1, 1, 2, 2, 2 }); //negative test case
+            //x_Of_A_Kind_In_Deck.HasGroupsSizeX(new int[] { 1, 2, 2, 2, 2 }); //negative test case
+            x_Of_A_Kind_In_Deck.HasGroupsSizeX(new int[] { 1, 1, 1, 1, 2, 2, 2, 2, 2, 2});//positive test case
         }
 
         private static void MountainArrayClassDriverCode()
