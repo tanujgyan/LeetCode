@@ -5,6 +5,9 @@ using System.Text;
 
 namespace LeetCode.Amazon_Interview_Questions
 {
+    /// <summary>
+    /// https://leetcode.com/problems/first-unique-character-in-a-string/
+    /// </summary>
     class FirstUniqueCharacterInString
     {
         public int FirstUniqChar(string s)

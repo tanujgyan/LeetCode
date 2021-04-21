@@ -4,6 +4,9 @@ using System.Text;
 
 namespace LeetCode
 {
+    /// <summary>
+    /// https://leetcode.com/problems/single-number/
+    /// </summary>
     class SingleNumberClass
     {
         public int SingleNumber(int[] nums)
@@ -28,6 +31,15 @@ namespace LeetCode
                 }
             }
             return 0;
+        }
+        public int SingleNumberUsingXOR(int[] nums)
+        {
+            int a = 0;
+            foreach(var n in nums)
+            {
+                a = a ^ n;
+            }
+            return a;
         }
         
     }
