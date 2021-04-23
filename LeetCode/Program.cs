@@ -55,8 +55,118 @@ namespace LeetCode
             //ThirdMaxClassDriverCode();
             //CanPlaceFlowersClassDriverCode();
             // MountainArrayClassDriverCode();
-           // X_Of_a_Kind_In_Deck_DriverCode();
-            MostCommonWordDriverCode();
+            // X_Of_a_Kind_In_Deck_DriverCode();
+            //MostCommonWordDriverCode();
+            //CoinChangeClassDriverCode();
+            //HowSumDriverCode();
+            // FirstUniqueCharacterInStringDriverCode();
+            //SingleNumberClassDriverCode();
+            //PowerOfTwoDriverCode();
+            //RobotReturnToOriginDriverCode();
+            // MissingNumberClassDriverCode();
+            PathSumsClassDriverCode();
+            //RottingOrangesDriverCode();
+           // PartitionLabelDriverCode();
+           // LongestCommonPrefixDriverCode();
+           //WordSearchClassDriverCode();
+        }
+
+        private static void WordSearchClassDriverCode()
+        {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            WordSearchClass wordSearch = new WordSearchClass();
+            var data = new char[3][];
+            data[0] = new char[] { 'A','B','C','E' };
+            data[1] = new char[] { 'S', 'F', 'C', 'S' };
+            data[2] = new char[] { 'A', 'D', 'E', 'E' };
+            wordSearch.Exist(data, "ADX");
+            stopwatch.Stop();
+            Console.WriteLine(stopwatch.ElapsedMilliseconds);
+        }
+
+        private static void LongestCommonPrefixDriverCode()
+        {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            LeetCode.Amazon_Interview_Questions.LongestCommonPrefix longestCommonPrefix = new LeetCode.Amazon_Interview_Questions.LongestCommonPrefix();
+            Console.WriteLine(longestCommonPrefix.LongestCommonPrefixMethod(new string[] { "a" })); 
+            stopwatch.Stop();
+            Console.WriteLine(stopwatch.ElapsedMilliseconds);
+        }
+
+        private static void PartitionLabelDriverCode()
+        {
+            PartitionLabel partitionLabel = new PartitionLabel();
+            partitionLabel.PartitionLabels("abacbded");
+        }
+
+        private static void RottingOrangesDriverCode()
+        {
+            RottingOranges rottingOranges = new RottingOranges();
+            var data = new int[3][];
+            data[0] = new int[] { 2,1,1};
+            data[1] = new int[] { 1,1,0 };
+            data[2] = new int[] {0,1,1 };
+            Console.WriteLine(rottingOranges.OrangesRotting(data)); 
+        }
+
+        private static void PathSumsClassDriverCode()
+        {
+            PathSumsClass pathSumsClass = new PathSumsClass();
+            TreeNode binaryTree = new TreeNode(5,new TreeNode(4,new TreeNode(11,new TreeNode(7),new TreeNode(2))),new TreeNode(8,new TreeNode(13),new TreeNode(4,null,new TreeNode(1))));
+            Console.WriteLine(pathSumsClass.HasPathSum2(binaryTree, 22));  
+           
+        }
+
+        private static void MissingNumberClassDriverCode()
+        {
+            MissingNumberClass missingNumberClass = new MissingNumberClass();
+            Console.WriteLine(missingNumberClass.MissingNumber(new int[] { 0, 1 })); 
+        }
+
+        private static void RobotReturnToOriginDriverCode()
+        {
+            RobotReturnToOrigin robotReturnToOrigin = new RobotReturnToOrigin();
+            robotReturnToOrigin.JudgeCircle("UD");
+        }
+
+        private static void PowerOfTwoDriverCode()
+        {
+            PowerOfTwo powerOfTwo = new PowerOfTwo();
+            Console.WriteLine(powerOfTwo.IsPowerOfTwo(6));
+        }
+
+        private static void SingleNumberClassDriverCode()
+        {
+            SingleNumberClass singleNumberClass = new SingleNumberClass();
+            Console.WriteLine(singleNumberClass.SingleNumberUsingXOR(new int[] { 1, 1, 2, 2, 3 })); 
+        }
+
+        private static void FirstUniqueCharacterInStringDriverCode()
+        {
+            FirstUniqueCharacterInString firstUniqueCharacterInString = new FirstUniqueCharacterInString();
+            Console.WriteLine(firstUniqueCharacterInString.FirstUniqChar("aabbc")); 
+        }
+
+        private static void HowSumDriverCode()
+        {
+            HowSum howSum = new HowSum();
+           // var r= howSum.HowSumMethodOptimal(new int[] { 83, 186, 408, 419  }, 6249);
+            //var r = howSum.coinChange(new int[] { 1,2 }, 3);
+            var r = howSum.minCoins(new int[] { 5,3,4,7}, 7);
+            //var r = howSum.HowSumMethodOptimal(new int[] { 5, 3, 4, 7 }, 7);
+            Console.WriteLine(r);
+            //Console.WriteLine(r.Sum());
+        }
+
+        private static void CoinChangeClassDriverCode()
+        {
+            CoinChangeClass coinChangeClass = new CoinChangeClass();
+            //coinChangeClass.CoinChange(new int[] { 186,419,83,408}, 6249);
+          //var r= coinChangeClass.CoinChange(new int[] { 2,5}, 11);
+            //Console.WriteLine(r);
+           
         }
 
         private static void MostCommonWordDriverCode()
@@ -383,7 +493,7 @@ namespace LeetCode
         static void RemoveElementDriverCode()
         {
             RemoveElement removeElementDriverCode = new RemoveElement();
-            removeElementDriverCode.RemoveElementMethod(new int[] { 3, 3 }, 5);
+            removeElementDriverCode.RemoveElementMethod(new int[] { 0, 1, 2, 2, 3, 0, 4, 2 }, 2);
         }
         static void ImplementstrStrDriverCode()
         {
