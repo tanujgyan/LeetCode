@@ -70,7 +70,8 @@ namespace LeetCode
             // PartitionLabelDriverCode();
             // LongestCommonPrefixDriverCode();
             //WordSearchClassDriverCode();
-            PathSum2ClassDriverCode();
+            //PathSum2ClassDriverCode();
+            ReorganizeStringClassDriverCode();
             #region Recursion Problems
             //FibonnaciSeriesDriverCode();
             //StrCpyDriverCode();
@@ -79,6 +80,12 @@ namespace LeetCode
             //CountConsonantsClassDriverCode();
            // CombinationInAstringOfDigitsDriverCode();
             #endregion
+        }
+
+        private static void ReorganizeStringClassDriverCode()
+        {
+            ReorganizeStringClass reorganizeStringClass = new ReorganizeStringClass();
+            reorganizeStringClass.ReorganizeString("aaabbccccccc");
         }
 
         private static void PathSum2ClassDriverCode()
