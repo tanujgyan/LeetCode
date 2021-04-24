@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using LeetCode.Recursion_Problems;
 
 namespace LeetCode
 {
@@ -64,20 +65,83 @@ namespace LeetCode
             //PowerOfTwoDriverCode();
             //RobotReturnToOriginDriverCode();
             // MissingNumberClassDriverCode();
-            PathSumsClassDriverCode();
+            //PathSumsClassDriverCode();
             //RottingOrangesDriverCode();
-           // PartitionLabelDriverCode();
-           // LongestCommonPrefixDriverCode();
-           //WordSearchClassDriverCode();
+            // PartitionLabelDriverCode();
+            // LongestCommonPrefixDriverCode();
+            //WordSearchClassDriverCode();
+            PathSum2ClassDriverCode();
+            #region Recursion Problems
+            //FibonnaciSeriesDriverCode();
+            //StrCpyDriverCode();
+            //FirstUpperCaseCharacterDriverCode();
+            //LengthOfStringUsingRecursionDriverCode();
+            //CountConsonantsClassDriverCode();
+           // CombinationInAstringOfDigitsDriverCode();
+            #endregion
         }
 
+        private static void PathSum2ClassDriverCode()
+        {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            PathSum2Class pathSum2Class = new PathSum2Class();
+            TreeNode binaryTree = new TreeNode(5, new TreeNode(4, new TreeNode(11, new TreeNode(2), new TreeNode(2))), new TreeNode(8, new TreeNode(9), new TreeNode(4, null, new TreeNode(1))));
+            pathSum2Class.PathSum(binaryTree, 22);
+            stopwatch.Stop();
+            Console.WriteLine(stopwatch.ElapsedMilliseconds);
+        }
+
+        private static void CombinationInAstringOfDigitsDriverCode()
+        {
+            CombinationInAstringOfDigits combinationInAstringOfDigits = new CombinationInAstringOfDigits();
+            
+            char[] input = "1234".ToCharArray();
+            char[] output = new char[100];
+
+            combinationInAstringOfDigits.printCombinations(input, 0, output, 0);
+        }
+
+        private static void CountConsonantsClassDriverCode()
+        {
+            CountConsonantsClass countconstants = new CountConsonantsClass();
+            Console.WriteLine(countconstants.CountConsonants("geeks for geeks"));
+        }
+
+        private static void LengthOfStringUsingRecursionDriverCode()
+        {
+            LengthOfStringUsingRecursion lengthOfStringUsingRecursion = new LengthOfStringUsingRecursion();
+            Console.WriteLine(lengthOfStringUsingRecursion.stringLength("geeks"));
+        }
+
+        private static void FirstUpperCaseCharacterDriverCode()
+        {
+            FirstUpperCaseCharacter firstUpperCaseCharacter = new FirstUpperCaseCharacter();
+            Console.WriteLine(firstUpperCaseCharacter.FirstUpperCaseCharacterMethod("geeksforgeeks")); 
+        }
+
+        private static void StrCpyDriverCode()
+        {
+            StrCpy strCpy = new StrCpy();
+            Console.WriteLine(strCpy.strCpyMethod("hello", "g", 0));
+        }
+
+        #region Recursion Problems Calls
+        private static void FibonnaciSeriesDriverCode()
+        {
+            FibonnaciSeries fibonnaciSeriesDriverCode = new FibonnaciSeries();
+            Console.WriteLine(fibonnaciSeriesDriverCode.CalculateFibonnaci(1234));
+        }
+
+
+        #endregion
         private static void WordSearchClassDriverCode()
         {
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             WordSearchClass wordSearch = new WordSearchClass();
             var data = new char[3][];
-            data[0] = new char[] { 'A','B','C','E' };
+            data[0] = new char[] { 'A', 'B', 'C', 'E' };
             data[1] = new char[] { 'S', 'F', 'C', 'S' };
             data[2] = new char[] { 'A', 'D', 'E', 'E' };
             wordSearch.Exist(data, "ADX");
@@ -90,7 +154,7 @@ namespace LeetCode
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             LeetCode.Amazon_Interview_Questions.LongestCommonPrefix longestCommonPrefix = new LeetCode.Amazon_Interview_Questions.LongestCommonPrefix();
-            Console.WriteLine(longestCommonPrefix.LongestCommonPrefixMethod(new string[] { "a" })); 
+            Console.WriteLine(longestCommonPrefix.LongestCommonPrefixMethod(new string[] { "a" }));
             stopwatch.Stop();
             Console.WriteLine(stopwatch.ElapsedMilliseconds);
         }
@@ -105,24 +169,24 @@ namespace LeetCode
         {
             RottingOranges rottingOranges = new RottingOranges();
             var data = new int[3][];
-            data[0] = new int[] { 2,1,1};
-            data[1] = new int[] { 1,1,0 };
-            data[2] = new int[] {0,1,1 };
-            Console.WriteLine(rottingOranges.OrangesRotting(data)); 
+            data[0] = new int[] { 2, 1, 1 };
+            data[1] = new int[] { 1, 1, 0 };
+            data[2] = new int[] { 0, 1, 1 };
+            Console.WriteLine(rottingOranges.OrangesRotting(data));
         }
 
         private static void PathSumsClassDriverCode()
         {
             PathSumsClass pathSumsClass = new PathSumsClass();
-            TreeNode binaryTree = new TreeNode(5,new TreeNode(4,new TreeNode(11,new TreeNode(7),new TreeNode(2))),new TreeNode(8,new TreeNode(13),new TreeNode(4,null,new TreeNode(1))));
-            Console.WriteLine(pathSumsClass.HasPathSum2(binaryTree, 22));  
-           
+            TreeNode binaryTree = new TreeNode(5, new TreeNode(4, new TreeNode(11, new TreeNode(7), new TreeNode(2))), new TreeNode(8, new TreeNode(13), new TreeNode(4, null, new TreeNode(1))));
+            Console.WriteLine(pathSumsClass.HasPathSum2(binaryTree, 22));
+
         }
 
         private static void MissingNumberClassDriverCode()
         {
             MissingNumberClass missingNumberClass = new MissingNumberClass();
-            Console.WriteLine(missingNumberClass.MissingNumber(new int[] { 0, 1 })); 
+            Console.WriteLine(missingNumberClass.MissingNumber(new int[] { 0, 1 }));
         }
 
         private static void RobotReturnToOriginDriverCode()
@@ -140,21 +204,21 @@ namespace LeetCode
         private static void SingleNumberClassDriverCode()
         {
             SingleNumberClass singleNumberClass = new SingleNumberClass();
-            Console.WriteLine(singleNumberClass.SingleNumberUsingXOR(new int[] { 1, 1, 2, 2, 3 })); 
+            Console.WriteLine(singleNumberClass.SingleNumberUsingXOR(new int[] { 1, 1, 2, 2, 3 }));
         }
 
         private static void FirstUniqueCharacterInStringDriverCode()
         {
             FirstUniqueCharacterInString firstUniqueCharacterInString = new FirstUniqueCharacterInString();
-            Console.WriteLine(firstUniqueCharacterInString.FirstUniqChar("aabbc")); 
+            Console.WriteLine(firstUniqueCharacterInString.FirstUniqChar("aabbc"));
         }
 
         private static void HowSumDriverCode()
         {
             HowSum howSum = new HowSum();
-           // var r= howSum.HowSumMethodOptimal(new int[] { 83, 186, 408, 419  }, 6249);
+            // var r= howSum.HowSumMethodOptimal(new int[] { 83, 186, 408, 419  }, 6249);
             //var r = howSum.coinChange(new int[] { 1,2 }, 3);
-            var r = howSum.minCoins(new int[] { 5,3,4,7}, 7);
+            var r = howSum.minCoins(new int[] { 5, 3, 4, 7 }, 7);
             //var r = howSum.HowSumMethodOptimal(new int[] { 5, 3, 4, 7 }, 7);
             Console.WriteLine(r);
             //Console.WriteLine(r.Sum());
@@ -164,15 +228,15 @@ namespace LeetCode
         {
             CoinChangeClass coinChangeClass = new CoinChangeClass();
             //coinChangeClass.CoinChange(new int[] { 186,419,83,408}, 6249);
-          //var r= coinChangeClass.CoinChange(new int[] { 2,5}, 11);
+            //var r= coinChangeClass.CoinChange(new int[] { 2,5}, 11);
             //Console.WriteLine(r);
-           
+
         }
 
         private static void MostCommonWordDriverCode()
         {
             MostCommonWordClass mostCommonWord = new MostCommonWordClass();
-           // mostCommonWord.MostCommonWord("ball.toy ,        roy roy!", new string[] { " " });
+            // mostCommonWord.MostCommonWord("ball.toy ,        roy roy!", new string[] { " " });
             //mostCommonWord.MostCommonWordAttempt2("ball.toy ,        roy roy!", new string[] { " " });
             mostCommonWord.MostCommonWordAttempt2("a, a, a, a, b,b,b,c, c", new string[] { "a" });
         }
@@ -183,13 +247,13 @@ namespace LeetCode
             //x_Of_A_Kind_In_Deck.HasGroupsSizeX(new int[] { 1, 1, 2, 2, 2, 2 }); //positive test case
             //x_Of_A_Kind_In_Deck.HasGroupsSizeX(new int[] { 1, 1, 2, 2, 2 }); //negative test case
             //x_Of_A_Kind_In_Deck.HasGroupsSizeX(new int[] { 1, 2, 2, 2, 2 }); //negative test case
-            x_Of_A_Kind_In_Deck.HasGroupsSizeX(new int[] { 1, 1, 1, 1, 2, 2, 2, 2, 2, 2});//positive test case
+            x_Of_A_Kind_In_Deck.HasGroupsSizeX(new int[] { 1, 1, 1, 1, 2, 2, 2, 2, 2, 2 });//positive test case
         }
 
         private static void MountainArrayClassDriverCode()
         {
             MountainArrayClass mountainArrayClass = new MountainArrayClass();
-            mountainArrayClass.ValidMountainArray(new int[] {5,6,7,8,6 });
+            mountainArrayClass.ValidMountainArray(new int[] { 5, 6, 7, 8, 6 });
         }
 
         private static void CanPlaceFlowersClassDriverCode()
@@ -201,7 +265,7 @@ namespace LeetCode
         private static void ThirdMaxClassDriverCode()
         {
             ThirdMaxClass thirdMaxClass = new ThirdMaxClass();
-            thirdMaxClass.ThirdMax(new int[] { 1, 2, 2, 5, 3, 5});
+            thirdMaxClass.ThirdMax(new int[] { 1, 2, 2, 5, 3, 5 });
         }
 
         private static void MinStackDriverCode()
@@ -210,7 +274,7 @@ namespace LeetCode
             obj.Push(-2);
             obj.Push(0);
             obj.Push(-3);
-            int param_1= obj.GetMin();
+            int param_1 = obj.GetMin();
             obj.Pop();
             int param_3 = obj.Top();
             int param_4 = obj.GetMin();
@@ -219,36 +283,36 @@ namespace LeetCode
         private static void EmployeeImportanceClassDriverCode()
         {
             List<Employee> employees = new List<Employee>();
-            
+
             employees.Add(new Employee { id = 1, importance = 50, subordinates = new List<int> { 2 } });
-            employees.Add(new Employee { id = 2, importance = 89, subordinates = new List<int>() {3} });
+            employees.Add(new Employee { id = 2, importance = 89, subordinates = new List<int>() { 3 } });
             employees.Add(new Employee { id = 3, importance = 69, subordinates = new List<int>() { 4 } });
             employees.Add(new Employee { id = 4, importance = 52, subordinates = new List<int>() { 5, 26 } });
             employees.Add(new Employee { id = 5, importance = 78, subordinates = new List<int>() { 6, 7 } });
             employees.Add(new Employee { id = 6, importance = 63, subordinates = new List<int>() { } });
-            employees.Add(new Employee { id = 7, importance = 55, subordinates = new List<int>() {8 } });
-            employees.Add(new Employee { id = 8, importance = 88, subordinates = new List<int>() {9,25 } });
-            employees.Add(new Employee { id = 9, importance = 64, subordinates = new List<int>() {10 } });
-            employees.Add(new Employee { id = 10, importance = 54, subordinates = new List<int>() { 11,19} });
-            employees.Add(new Employee { id = 11, importance = 81, subordinates = new List<int>() { 12} });
-            employees.Add(new Employee { id = 12, importance = 83, subordinates = new List<int>() { 13,18} });
-            employees.Add(new Employee { id = 13, importance = 58, subordinates = new List<int>() { 14,15} });
+            employees.Add(new Employee { id = 7, importance = 55, subordinates = new List<int>() { 8 } });
+            employees.Add(new Employee { id = 8, importance = 88, subordinates = new List<int>() { 9, 25 } });
+            employees.Add(new Employee { id = 9, importance = 64, subordinates = new List<int>() { 10 } });
+            employees.Add(new Employee { id = 10, importance = 54, subordinates = new List<int>() { 11, 19 } });
+            employees.Add(new Employee { id = 11, importance = 81, subordinates = new List<int>() { 12 } });
+            employees.Add(new Employee { id = 12, importance = 83, subordinates = new List<int>() { 13, 18 } });
+            employees.Add(new Employee { id = 13, importance = 58, subordinates = new List<int>() { 14, 15 } });
             employees.Add(new Employee { id = 14, importance = 64, subordinates = new List<int>() { } });
-            employees.Add(new Employee { id = 15, importance = 97, subordinates = new List<int>() { 16} });
-            employees.Add(new Employee { id = 16, importance = 67, subordinates = new List<int>() { 17} });
+            employees.Add(new Employee { id = 15, importance = 97, subordinates = new List<int>() { 16 } });
+            employees.Add(new Employee { id = 16, importance = 67, subordinates = new List<int>() { 17 } });
             employees.Add(new Employee { id = 17, importance = 56, subordinates = new List<int>() { } });
             employees.Add(new Employee { id = 18, importance = 64, subordinates = new List<int>() { } });
-            employees.Add(new Employee { id = 19, importance = 95, subordinates = new List<int>() { 20,23} });
-            employees.Add(new Employee { id = 20, importance = 70, subordinates = new List<int>() { 21,22} });
+            employees.Add(new Employee { id = 19, importance = 95, subordinates = new List<int>() { 20, 23 } });
+            employees.Add(new Employee { id = 20, importance = 70, subordinates = new List<int>() { 21, 22 } });
             employees.Add(new Employee { id = 21, importance = 74, subordinates = new List<int>() { } });
             employees.Add(new Employee { id = 22, importance = 95, subordinates = new List<int>() { } });
-            employees.Add(new Employee { id = 23, importance = 56, subordinates = new List<int>() {24 } });
+            employees.Add(new Employee { id = 23, importance = 56, subordinates = new List<int>() { 24 } });
             employees.Add(new Employee { id = 24, importance = 100, subordinates = new List<int>() { } });
             employees.Add(new Employee { id = 25, importance = 69, subordinates = new List<int>() { } });
             employees.Add(new Employee { id = 26, importance = 98, subordinates = new List<int>() { } });
             EmployeeImportanceClass employeeImportanceClass = new EmployeeImportanceClass();
             //employeeImportanceClass.AddToStack(employees, 1);
-           employeeImportanceClass.GetImportance(employees, 1);
+            employeeImportanceClass.GetImportance(employees, 1);
         }
 
         private static void DFSGraphDriverCode()
@@ -279,13 +343,13 @@ namespace LeetCode
         private static void ContainsDuplicate2ClassDriverCode()
         {
             ContainsDuplicate2Class containsDuplicate2Class = new ContainsDuplicate2Class();
-            containsDuplicate2Class.ContainsNearbyDuplicate(new int[] { 1,0,1,1 }, 1);
+            containsDuplicate2Class.ContainsNearbyDuplicate(new int[] { 1, 0, 1, 1 }, 1);
         }
 
         private static void RemoveNthNodeFromLastDriverCode()
         {
             RemoveNthNodeFromLast removeNthNodeFromLast = new RemoveNthNodeFromLast();
-            removeNthNodeFromLast.CreateSampleList(new Queue<int>(new[] { 1,2,3,4,5}),removeNthNodeFromLast.l1);
+            removeNthNodeFromLast.CreateSampleList(new Queue<int>(new[] { 1, 2, 3, 4, 5 }), removeNthNodeFromLast.l1);
             removeNthNodeFromLast.RemoveNthFromEnd(removeNthNodeFromLast.l1, 2);
         }
 
@@ -308,8 +372,8 @@ namespace LeetCode
         private static void NumberOfGoodPairsDriverCode()
         {
             NumberOfGoodPairs numberOfGoodPairs = new NumberOfGoodPairs();
-             numberOfGoodPairs.NumIdenticalPairs(new int[] { 2, 2, 1, 5, 1, 5, 5, 2, 3, 1, 1, 5, 3, 2, 3, 3, 3, 1, 3, 3, 4, 3, 1, 3, 1, 4, 5, 5, 2, 2, 1, 3, 5, 2, 2, 4, 3, 2, 5, 3, 1, 1, 3, 3, 2, 5, 2, 1, 2, 4, 3, 4, 4, 3, 2, 4, 4, 1, 3, 3, 3, 5, 5, 5, 4, 1, 1, 2, 3, 3, 2, 5, 3, 4, 5, 3, 1, 2, 5, 4, 5, 2, 3, 3, 1, 5, 2, 4, 2, 4, 4, 3, 1, 3});
-           // numberOfGoodPairs.NumIdenticalPairs(new int[] { 1, 2, 3, 1, 1, 3 });
+            numberOfGoodPairs.NumIdenticalPairs(new int[] { 2, 2, 1, 5, 1, 5, 5, 2, 3, 1, 1, 5, 3, 2, 3, 3, 3, 1, 3, 3, 4, 3, 1, 3, 1, 4, 5, 5, 2, 2, 1, 3, 5, 2, 2, 4, 3, 2, 5, 3, 1, 1, 3, 3, 2, 5, 2, 1, 2, 4, 3, 4, 4, 3, 2, 4, 4, 1, 3, 3, 3, 5, 5, 5, 4, 1, 1, 2, 3, 3, 2, 5, 3, 4, 5, 3, 1, 2, 5, 4, 5, 2, 3, 3, 1, 5, 2, 4, 2, 4, 4, 3, 1, 3 });
+            // numberOfGoodPairs.NumIdenticalPairs(new int[] { 1, 2, 3, 1, 1, 3 });
         }
 
         private static void MinAdjacentSwapsToMakePalindromeDriverCode()
@@ -339,7 +403,7 @@ namespace LeetCode
         private static void MajorityElementClassDriverCode()
         {
             MajorityElementClass majorityElementClass = new MajorityElementClass();
-            Console.WriteLine(majorityElementClass.MajorityElement(new int[] { 2, 2, 1, 1, 1, 2, 2 })); 
+            Console.WriteLine(majorityElementClass.MajorityElement(new int[] { 2, 2, 1, 1, 1, 2, 2 }));
         }
 
         private static void ExcelSheetColumnNumberDriverCode()
@@ -351,19 +415,19 @@ namespace LeetCode
         private static void ExcelSheetColumnTitleDriverCode()
         {
             ExcelSheetColumnTitle excelSheetColumnTitle = new ExcelSheetColumnTitle();
-            Console.WriteLine(excelSheetColumnTitle.ConvertToTitle(586)); 
+            Console.WriteLine(excelSheetColumnTitle.ConvertToTitle(586));
         }
 
         private static void TwoSumArraySortedInputDriverCode()
         {
             TwoSumArraySortedInput twoSumArraySortedInput = new TwoSumArraySortedInput();
-            Console.WriteLine(twoSumArraySortedInput.TwoSum(new int[] { 2, 7, 11, 15 }, 9)); 
+            Console.WriteLine(twoSumArraySortedInput.TwoSum(new int[] { 2, 7, 11, 15 }, 9));
         }
 
         private static void ContainerWithMostWaterDriverCode()
         {
             ContainerWithMostWater containerWithMostWater = new ContainerWithMostWater();
-            Console.WriteLine(containerWithMostWater.MaxArea(new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 })  ); 
+            Console.WriteLine(containerWithMostWater.MaxArea(new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 }));
         }
 
         private static void ValidPalindromeClassDriverCode()
@@ -408,12 +472,12 @@ namespace LeetCode
             //tree2.right.val = 3;
             sameTreeClass.IsSameTree(tree1, tree2);
         }
-    
+
 
         private static void MergeSortedArrayClassDriverCode()
         {
             MergeSortedArrayClass mergeSortedArrayClass = new MergeSortedArrayClass();
-            mergeSortedArrayClass.Merge(new int[6] { 1, 2, 3, 0, 0, 0 }, 3, new int[3] { 2,5,6 }, 3);
+            mergeSortedArrayClass.Merge(new int[6] { 1, 2, 3, 0, 0, 0 }, 3, new int[3] { 2, 5, 6 }, 3);
         }
 
         private static void RemoveDuplicateFromSortedListDriverCode()
@@ -432,19 +496,19 @@ namespace LeetCode
         private static void SquareRootDriverCode()
         {
             SquareRoot squareRoot = new SquareRoot();
-            Console.WriteLine(squareRoot.Sqrt(8)); 
+            Console.WriteLine(squareRoot.Sqrt(8));
         }
 
         private static void AddBinaryDriverCode()
         {
             AddBinary addBinary = new AddBinary();
-            Console.WriteLine(addBinary.AddBinaryMethod("11", "1")); 
+            Console.WriteLine(addBinary.AddBinaryMethod("11", "1"));
         }
 
         static void TwoSumDriverCode()
         {
             TwoSum twoSum = new TwoSum();
-            int[] nums = new int[] { 3,3,6 };
+            int[] nums = new int[] { 3, 3, 6 };
             int target = 0;
             var result = twoSum.TwoSumCalculator(nums, target);
             var dictResult = twoSum.TwoSumCalculatorUsingDictionary(nums, 3);
@@ -508,13 +572,13 @@ namespace LeetCode
         static void LengthOfLastWordClassDriverCode()
         {
             LengthOfLastWordClass lengthOfLastWordClass = new LengthOfLastWordClass();
-            Console.WriteLine(lengthOfLastWordClass.LengthOfLastWord("Hello World  ")); 
+            Console.WriteLine(lengthOfLastWordClass.LengthOfLastWord("Hello World  "));
         }
         static void PlusOneDriverCode()
         {
             PlusOne plusOne = new PlusOne();
             var result = plusOne.PlusOneMethod(new int[] { 9, 9 });
-           result.ToList().ForEach(x => Console.WriteLine(x));
+            result.ToList().ForEach(x => Console.WriteLine(x));
         }
-        }
+    }
 }
