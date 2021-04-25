@@ -23,7 +23,7 @@ namespace LeetCode.Amazon_Interview_Questions
             }
             //sort the dictionary based on value
             mapping = mapping.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
-            string finalstring = "";
+            StringBuilder finalstring = new StringBuilder("");
         //this loop will continue till there are atleast 2 unique elements in dictionary
            while(mapping.Count>=2)
             {
@@ -36,9 +36,9 @@ namespace LeetCode.Amazon_Interview_Questions
                     //take the top 2 characters and place them in alternate fashion
                     for(int j=0;j<mapping.ElementAt(i+1).Value;j++)
                     {
-                        finalstring += mapping.ElementAt(i).Key;
+                        finalstring.Append( mapping.ElementAt(i).Key);
                         mapping[mapping.ElementAt(i).Key]--;
-                        finalstring += mapping.ElementAt(i+1).Key;
+                        finalstring.Append(mapping.ElementAt(i+1).Key);
                         mapping[mapping.ElementAt(i+1).Key]--;
                     }
                     //after processing is done check if either of the element was exhausted
@@ -62,27 +62,32 @@ namespace LeetCode.Amazon_Interview_Questions
                while(mapping[mapping.ElementAt(0).Key]>0)
                 {
                    //if final string is empty then return empty result as it means there is only one type of character in input
-                    if (!string.IsNullOrEmpty(finalstring))
+                    if (finalstring.Length!=0)
                     {
                         //check if the leftover can be fitted in front or end of the string
                         if (finalstring[0] != mapping.ElementAt(0).Key)
                         {
-                            finalstring = mapping.ElementAt(0).Key + finalstring;
+                            // finalstring = mapping.ElementAt(0).Key + finalstring;
+                            finalstring.Insert(0, mapping.ElementAt(0).Key);
                             mapping[mapping.ElementAt(0).Key]--;
                             continue;
                         }
                         if (finalstring[finalstring.Length - 1] != mapping.ElementAt(0).Key)
                         {
-                            finalstring += mapping.ElementAt(0).Key;
+                            finalstring.Append(mapping.ElementAt(0).Key);
                             mapping[mapping.ElementAt(0).Key]--;
                             continue;
                         }
+
+                        //this for is not needed as there will be max one characters left at the end has to be adjusted 
+                        //in first position.this loop is futile and will only be a  waste of time here
                         //if elements are still left try fitting them into places where they will not become adjacent
                         for (int i = 0; i < finalstring.Length - 1; i++)
                         {
                             if (finalstring[i]! != mapping.ElementAt(0).Key && finalstring[i+1]! != mapping.ElementAt(0).Key)
                             {
-                                finalstring = finalstring.Substring(0, i + 1) + mapping.ElementAt(0).Key + finalstring.Substring(i + 1);
+                                // finalstring = finalstring.Substring(0, i + 1) + mapping.ElementAt(0).Key + finalstring.Substring(i + 1);
+                                finalstring.Insert(i + 1, mapping.ElementAt(0).Key);
                                 //check if more elements are left if not break
                                 if (mapping.ElementAt(0).Value == 0)
                                 {
@@ -105,7 +110,7 @@ namespace LeetCode.Amazon_Interview_Questions
                     }
                 }
             }
-            return finalstring;
+            return finalstring.ToString();
         }
     }
 }
