@@ -81,8 +81,9 @@ namespace LeetCode
             //SortByParityClassDriverCode();
             // LastStoneWeightClassDriverCode();
             //StringCompressionDriverCode();
-            NumberOfIslandsDriverCode();
-            NumberOfEnclavesDriverCode();
+            //NumberOfIslandsDriverCode();
+            //NumberOfEnclavesDriverCode();
+            SorroundedRegionsDriverCode();
             #region Recursion Problems
             //FibonnaciSeriesDriverCode();
             //StrCpyDriverCode();
@@ -91,6 +92,22 @@ namespace LeetCode
             //CountConsonantsClassDriverCode();
             // CombinationInAstringOfDigitsDriverCode();
             #endregion
+        }
+
+        private static void SorroundedRegionsDriverCode()
+        {
+            SorroundedRegions sorrounded = new SorroundedRegions();
+            char[][] grid = new char[3][];
+            //grid[0] = new char[] { 'X', 'X', 'X', 'X' };
+            //grid[1] = new char[] { 'X', 'O', 'O', 'X' };
+            //grid[2] = new char[] { 'X', 'X', 'O', 'X'};
+            //grid[3] = new char[] { 'X', 'O', 'X', 'X'};
+            grid[0] = new char[] { 'O', 'O', 'O'};
+            grid[1] = new char[] { 'O', 'O', 'O' };
+            grid[2] = new char[] { 'O', 'O', 'O' };
+          
+
+            sorrounded.Solve(grid);
         }
 
         private static void NumberOfEnclavesDriverCode()
