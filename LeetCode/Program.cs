@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using LeetCode.Recursion_Problems;
+using LeetCode.DFS_Questions;
 
 namespace LeetCode
 {
@@ -50,7 +51,7 @@ namespace LeetCode
             //RemoveNthNodeFromLastDriverCode();
             // ContainsDuplicate2ClassDriverCode();
             //LetterCombinationsOfPhoneNumberDriverCode();
-            //DFSGraphDriverCode();
+            // DFSGraphDriverCode();
             //EmployeeImportanceClassDriverCode();
             //MinStackDriverCode();
             //ThirdMaxClassDriverCode();
@@ -71,15 +72,109 @@ namespace LeetCode
             // LongestCommonPrefixDriverCode();
             //WordSearchClassDriverCode();
             //PathSum2ClassDriverCode();
-            ReorganizeStringClassDriverCode();
+            //ReorganizeStringClassDriverCode();
+            //GroupAnagramsClassDriverCode();
+            //ReverseVowelsClassDriverCode();
+            // IntersectionOfTwoLinkedListsDriverCode();
+            //LetterCombinationOfPhoneNumberWithDFSDriverCode();
+            // KClosestPointClassDriverCode();
+            //SortByParityClassDriverCode();
+            // LastStoneWeightClassDriverCode();
+            //StringCompressionDriverCode();
+            NumberOfIslandsDriverCode();
+            NumberOfEnclavesDriverCode();
             #region Recursion Problems
             //FibonnaciSeriesDriverCode();
             //StrCpyDriverCode();
             //FirstUpperCaseCharacterDriverCode();
             //LengthOfStringUsingRecursionDriverCode();
             //CountConsonantsClassDriverCode();
-           // CombinationInAstringOfDigitsDriverCode();
+            // CombinationInAstringOfDigitsDriverCode();
             #endregion
+        }
+
+        private static void NumberOfEnclavesDriverCode()
+        {
+            NumberOfEnclaves numberOfEnclaves = new NumberOfEnclaves();
+            int[][] grid = new int[10][] {
+                new int[]{0,0,0,1,1,1,0,1,0,0},
+                new int[]{1,1,0,0,0,1,0,1,1,1},
+                new int[]{0,0,0,1,1,1,0,1,0,0},
+                new int[]{0,1,1,0,0,0,1,0,1,0},
+                new int[]{0,1,1,1,1,1,0,0,1,0},
+                new int[]{0,0,1,0,1,1,1,1,0,1},
+                new int[]{0,1,1,0,0,0,1,1,1,1},
+                new int[]{0,0,1,0,0,1,0,1,0,1},
+                new int[]{1,0,1,0,1,1,0,0,0,0},
+                new int[]{0,0,0,0,1,1,0,0,0,1}
+            };
+
+            numberOfEnclaves.NumEnclaves(grid);
+        }
+
+        private static void NumberOfIslandsDriverCode()
+        {
+            NumberOfIslands numberOfIslands = new NumberOfIslands();
+            char[][] grid = new char[4][];
+            grid[0] = new char[] { '1', '1', '1', '1', '0' };
+            grid[1] = new char[] { '1', '1', '0', '1', '0' };
+            grid[2] = new char[] { '1', '1', '0', '0', '0' };
+            grid[3] = new char[] { '0', '0', '0', '0', '0' };
+            numberOfIslands.NumIslands(grid);
+        }
+
+        private static void StringCompressionDriverCode()
+        {
+            StringCompression stringCompression = new StringCompression();
+            stringCompression.Compress(new char[] { 'a', 'a', 'b', 'b', 'b', 'a', 'a' });
+        }
+
+        private static void LastStoneWeightClassDriverCode()
+        {
+            LastStoneWeightClass lastStoneWeightClass = new LastStoneWeightClass();
+            lastStoneWeightClass.LastStoneWeight(new int[] { 2, 2 });
+        }
+
+        private static void SortByParityClassDriverCode()
+        {
+            SortByParityClass sortByParityClass = new SortByParityClass();
+            sortByParityClass.SortArrayByParity(new int[] { 1, 2, 3, 4 });
+        }
+
+        private static void KClosestPointClassDriverCode()
+        {
+            KClosestPointClass kClosestPointClass = new KClosestPointClass();
+            var data = new int[2][];
+            data[0] = new int[] { 1, 3 };
+            data[1] = new int[] { -2, 2 };
+
+            kClosestPointClass.KClosest(data, 1);
+        }
+
+        private static void LetterCombinationOfPhoneNumberWithDFSDriverCode()
+        {
+            LetterCombinationOfPhoneNumberWithDFS letterCombinationOfPhoneNumberWithDFS = new LetterCombinationOfPhoneNumberWithDFS();
+            letterCombinationOfPhoneNumberWithDFS.LetterCombinations("234");
+        }
+
+        private static void IntersectionOfTwoLinkedListsDriverCode()
+        {
+            IntersectionOfTwoLinkedLists intersectionOfTwoLinkedLists = new IntersectionOfTwoLinkedLists();
+            intersectionOfTwoLinkedLists.CreateSampleList(new Queue<int>(new int[] { 4, 1, 8, 4, 5 }), intersectionOfTwoLinkedLists.nodeA);
+            intersectionOfTwoLinkedLists.CreateSampleList(new Queue<int>(new int[] { 5, 6, 1, 8, 4, 5 }), intersectionOfTwoLinkedLists.nodeB);
+            intersectionOfTwoLinkedLists.GetIntersectionNode(intersectionOfTwoLinkedLists.nodeA, intersectionOfTwoLinkedLists.nodeB);
+        }
+
+        private static void ReverseVowelsClassDriverCode()
+        {
+            ReverseVowelsClass reverseVowelsClass = new ReverseVowelsClass();
+            reverseVowelsClass.ReverseVowels("race car");
+        }
+
+        private static void GroupAnagramsClassDriverCode()
+        {
+            GroupAnagramsClass groupAnagramsClass = new GroupAnagramsClass();
+            groupAnagramsClass.GroupAnagrams(new string[] { "eat", "tea", "tan", "ate", "nat", "bat" });
         }
 
         private static void ReorganizeStringClassDriverCode()
@@ -102,7 +197,7 @@ namespace LeetCode
         private static void CombinationInAstringOfDigitsDriverCode()
         {
             CombinationInAstringOfDigits combinationInAstringOfDigits = new CombinationInAstringOfDigits();
-            
+
             char[] input = "1234".ToCharArray();
             char[] output = new char[100];
 
@@ -124,7 +219,7 @@ namespace LeetCode
         private static void FirstUpperCaseCharacterDriverCode()
         {
             FirstUpperCaseCharacter firstUpperCaseCharacter = new FirstUpperCaseCharacter();
-            Console.WriteLine(firstUpperCaseCharacter.FirstUpperCaseCharacterMethod("geeksforgeeks")); 
+            Console.WriteLine(firstUpperCaseCharacter.FirstUpperCaseCharacterMethod("geeksforgeeks"));
         }
 
         private static void StrCpyDriverCode()
