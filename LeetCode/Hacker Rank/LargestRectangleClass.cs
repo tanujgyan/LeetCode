@@ -4,6 +4,9 @@ using System.Text;
 
 namespace LeetCode.Hacker_Rank
 {
+    /// <summary>
+    /// https://leetcode.com/problems/largest-rectangle-in-histogram/
+    /// </summary>
     class LargestRectangleClass
     {
         public int LargestRectangleAreaBruteForce(int[] heights)
@@ -53,26 +56,26 @@ namespace LeetCode.Hacker_Rank
             Stack<int> barHeights = new Stack<int>();
             Stack<int> positions = new Stack<int>();
             int maxarea = 0;
-            for(int i=0;i<heights.Length;i++)
+            for (int i = 0; i < heights.Length; i++)
             {
-                if(barHeights.Count==0 && positions.Count==0)
+                if (barHeights.Count == 0 && positions.Count == 0)
                 {
                     barHeights.Push(heights[i]);
                     positions.Push(i);
                 }
                 else
                 {
-                    if(barHeights.Peek()<heights[i])
+                    if (barHeights.Count > 0 && barHeights.Peek() < heights[i])
                     {
                         barHeights.Push(heights[i]);
                         positions.Push(i);
                     }
-                    else if(barHeights.Peek()>heights[i])
+                    else if (barHeights.Count > 0 && barHeights.Peek() > heights[i])
                     {
-                        while (barHeights.Peek() > heights[i])
+                        while (barHeights.Count > 0 && barHeights.Peek() > heights[i])
                         {
                             maxarea = Math.Max((barHeights.Pop() * (i - positions.Peek())), maxarea);
-                            if(barHeights.Peek()>heights[i])
+                            if (barHeights.Count > 0 && barHeights.Peek() > heights[i])
                             {
                                 positions.Pop();
                             }
@@ -81,9 +84,9 @@ namespace LeetCode.Hacker_Rank
                     }
                 }
             }
-            while(barHeights.Count>0)
+            while (barHeights.Count > 0)
             {
-                maxarea = Math.Max((barHeights.Pop() * (heights.Length-positions.Pop())),maxarea);
+                maxarea = Math.Max((barHeights.Pop() * (heights.Length - positions.Pop())), maxarea);
             }
             return maxarea;
         }

@@ -90,7 +90,8 @@ namespace LeetCode
             //CountMatchesOfATournamentDriverCode();
             //MaximumProductOfThreeNumbersDriverCode();
             //BalancedBracketsDriverCode();
-            LargestRectangleClassDriverCode();
+           // LargestRectangleClassDriverCode();
+            MakingAnagramsClassDriverCode();
             #region Recursion Problems
             //FibonnaciSeriesDriverCode();
             //StrCpyDriverCode();
@@ -99,6 +100,11 @@ namespace LeetCode
             //CountConsonantsClassDriverCode();
             // CombinationInAstringOfDigitsDriverCode();
             #endregion
+        }
+
+        private static void MakingAnagramsClassDriverCode()
+        {
+            MakingAnagramsClass.makeAnagram("abccc", "dec");
         }
 
         private static void LargestRectangleClassDriverCode()
