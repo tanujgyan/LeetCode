@@ -6,6 +6,8 @@ using System.Diagnostics;
 using System.Linq;
 using LeetCode.Recursion_Problems;
 using LeetCode.DFS_Questions;
+using LeetCode.Backtracking;
+using LeetCode.Hacker_Rank;
 
 namespace LeetCode
 {
@@ -83,7 +85,12 @@ namespace LeetCode
             //StringCompressionDriverCode();
             //NumberOfIslandsDriverCode();
             //NumberOfEnclavesDriverCode();
-            SorroundedRegionsDriverCode();
+           //SorroundedRegionsDriverCode();
+            //PairWithGivenProductClassDriverCode();
+            //CountMatchesOfATournamentDriverCode();
+            //MaximumProductOfThreeNumbersDriverCode();
+            //BalancedBracketsDriverCode();
+            LargestRectangleClassDriverCode();
             #region Recursion Problems
             //FibonnaciSeriesDriverCode();
             //StrCpyDriverCode();
@@ -92,6 +99,35 @@ namespace LeetCode
             //CountConsonantsClassDriverCode();
             // CombinationInAstringOfDigitsDriverCode();
             #endregion
+        }
+
+        private static void LargestRectangleClassDriverCode()
+        {
+            LargestRectangleClass largestRectangleClass = new LargestRectangleClass();
+            largestRectangleClass.LargestRectangleAreaStackAlgorithm(new int[] {2,4});
+        }
+
+        private static void BalancedBracketsDriverCode()
+        {
+            Console.WriteLine(BalancedBrackets.isBalanced("]"));
+        }
+
+        private static void MaximumProductOfThreeNumbersDriverCode()
+        {
+            MaximumProductOfThreeNumbers maximumProductOfThreeNumbers = new MaximumProductOfThreeNumbers();
+            maximumProductOfThreeNumbers.MaximumProduct(new int[] { -1, -2, -3,-4});
+        }
+
+        private static void CountMatchesOfATournamentDriverCode()
+        {
+            CountMatchesOfATournament countMatchesOfATournament = new CountMatchesOfATournament();
+            Console.WriteLine(countMatchesOfATournament.NumberOfMatches(14)); 
+        }
+
+        private static void PairWithGivenProductClassDriverCode()
+        {
+            PairWithGivenProductClass pairWithGivenProductClass = new PairWithGivenProductClass();
+            Console.WriteLine(pairWithGivenProductClass.PairWithGivenProduct(new int[] { -10, 20, 9, 40 },-400)); 
         }
 
         private static void SorroundedRegionsDriverCode()
