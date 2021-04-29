@@ -85,13 +85,18 @@ namespace LeetCode
             //StringCompressionDriverCode();
             //NumberOfIslandsDriverCode();
             //NumberOfEnclavesDriverCode();
-           //SorroundedRegionsDriverCode();
+            //SorroundedRegionsDriverCode();
             //PairWithGivenProductClassDriverCode();
             //CountMatchesOfATournamentDriverCode();
             //MaximumProductOfThreeNumbersDriverCode();
             //BalancedBracketsDriverCode();
-           // LargestRectangleClassDriverCode();
-            MakingAnagramsClassDriverCode();
+            // LargestRectangleClassDriverCode();
+            //MakingAnagramsClassDriverCode();
+            // AlternatingCharcatersClassDriverCode();
+            //CamelCaseMatchingDriverCode();
+            //NumberOfCamelCaseDriverCode();
+            //TwoCharacterDriverCode();
+            SherlockAndValidStringsDriverCode();
             #region Recursion Problems
             //FibonnaciSeriesDriverCode();
             //StrCpyDriverCode();
@@ -100,6 +105,32 @@ namespace LeetCode
             //CountConsonantsClassDriverCode();
             // CombinationInAstringOfDigitsDriverCode();
             #endregion
+        }
+
+        private static void SherlockAndValidStringsDriverCode()
+        {
+            Console.WriteLine(SherlockAndValidStrings.isValid("abcdefghhgfedecba")); 
+        }
+
+        private static void TwoCharacterDriverCode()
+        {
+            TwoCharacter.alternate("beabeefeab");
+        }
+
+        private static void NumberOfCamelCaseDriverCode()
+        {
+            NumberOfCamelCase.camelcase("saveChangesInTheEditor");
+        }
+
+        private static void CamelCaseMatchingDriverCode()
+        {
+            CamelCaseMatching camelCaseMatching = new CamelCaseMatching();
+            camelCaseMatching.CamelMatch(new string[] { "FooBar", "FooBarTest", "FootBall", "FrameBuffer", "ForceFeedBack" }, "FoBa");
+        }
+
+        private static void AlternatingCharcatersClassDriverCode()
+        {
+            AlternatingCharcatersClass.alternatingCharacters("AAABBB");
         }
 
         private static void MakingAnagramsClassDriverCode()
@@ -558,7 +589,7 @@ namespace LeetCode
         private static void RemoveAllAdjacentDuplicatesInString2DriverCode()
         {
             RemoveAllAdjacentDuplicatesInString2 removeAllAdjacentDuplicatesInString2 = new RemoveAllAdjacentDuplicatesInString2();
-            removeAllAdjacentDuplicatesInString2.RemoveDuplicates("pbbcggttciiippooaais", 2);
+            removeAllAdjacentDuplicatesInString2.RemoveDuplicates("aa", 2);
         }
 
         private static void MajorityElementClassDriverCode()

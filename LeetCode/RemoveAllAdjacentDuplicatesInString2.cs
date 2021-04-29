@@ -59,10 +59,14 @@ namespace LeetCode
                 {
                     s= s.Remove(i - k+1, k);
                     i = 0;
-                    temp = s[i].ToString();
+                    if (s.Length > 0)
+                        temp = s[i].ToString();
+                    else
+                        temp = "";
                 }
 
             }
+            
             return s;
         }
     }
