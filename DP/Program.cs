@@ -13,7 +13,26 @@ namespace DP
             //WordBreakClassDriverCode();
             //DivisorGameClassDriverCode();
             //CostOfStairsClassDriverCode();
-            CountSortedVowelsDriverCode();
+           //CountSortedVowelsDriverCode();
+            MaxSumArrayDriverCode();
+        }
+
+        private static void MaxSumArrayDriverCode()
+        {
+            Console.WriteLine("Test 1");
+            MaxSumArray.maxSubsetSum(new int[] {3,7,4,6,5 });
+            Console.WriteLine("---------------------------------");
+            Console.WriteLine("Test 2");
+            MaxSumArray.maxSubsetSum(new int[] { 2, 1 ,5 ,8, 4 });
+            Console.WriteLine("Test 3");
+            Console.WriteLine("---------------------------------");
+            MaxSumArray.maxSubsetSum(new int[] { -2, 1, 3, -4, 5 });
+            Console.WriteLine("Test 4");
+            Console.WriteLine("---------------------------------");
+            MaxSumArray.maxSubsetSum(new int[] { -2, -1, -3, -4, -5 });
+            Console.WriteLine("Test 5");
+            Console.WriteLine("---------------------------------");
+            MaxSumArray.maxSubsetSum(new int[] { -3,5,-7,8,10 });
         }
 
         private static void CountSortedVowelsDriverCode()
