@@ -8,6 +8,7 @@ using LeetCode.Recursion_Problems;
 using LeetCode.DFS_Questions;
 using LeetCode.Backtracking;
 using LeetCode.Hacker_Rank;
+using LeetCode.Code_Line;
 
 namespace LeetCode
 {
@@ -96,7 +97,9 @@ namespace LeetCode
             //CamelCaseMatchingDriverCode();
             //NumberOfCamelCaseDriverCode();
             //TwoCharacterDriverCode();
-            SherlockAndValidStringsDriverCode();
+            //SherlockAndValidStringsDriverCode();
+            RotateImageDriverCode();
+            //DebtCoverDriverCode();
             #region Recursion Problems
             //FibonnaciSeriesDriverCode();
             //StrCpyDriverCode();
@@ -105,6 +108,23 @@ namespace LeetCode
             //CountConsonantsClassDriverCode();
             // CombinationInAstringOfDigitsDriverCode();
             #endregion
+        }
+
+        private static void DebtCoverDriverCode()
+        {
+            DebtCover debtCover = new DebtCover();
+            debtCover.DebtCoverMethod(50, 10, new float[] { 2, 2, 5 }, new float[] { 200, 100, 150 });
+        }
+
+        private static void RotateImageDriverCode()
+        {
+            RotateImage rotateImage = new RotateImage();
+            rotateImage.rotateImage(new int[3][]
+            {
+                new int[]{1,2,3},
+                new int[]{4,5,6},
+                new int[]{7,8,9}
+            });
         }
 
         private static void SherlockAndValidStringsDriverCode()

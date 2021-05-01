@@ -14,7 +14,14 @@ namespace DP
             //DivisorGameClassDriverCode();
             //CostOfStairsClassDriverCode();
            //CountSortedVowelsDriverCode();
-            MaxSumArrayDriverCode();
+            //MaxSumArrayDriverCode();
+            LongestPalindromicSubstringDriverCode();
+        }
+
+        private static void LongestPalindromicSubstringDriverCode()
+        {
+            LongestPalindromicSubstring longestPalindromicSubstring = new LongestPalindromicSubstring();
+            longestPalindromicSubstring.LongestPalindrome("eeeee");
         }
 
         private static void MaxSumArrayDriverCode()
