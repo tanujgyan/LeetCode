@@ -98,8 +98,13 @@ namespace LeetCode
             //NumberOfCamelCaseDriverCode();
             //TwoCharacterDriverCode();
             //SherlockAndValidStringsDriverCode();
-            RotateImageDriverCode();
+            //RotateImageDriverCode();
             //DebtCoverDriverCode();
+            //ReverseLinkedListDriverCode();
+            // PalindromicLinkedListDriverCode();
+            //RemoveFromLinkedListDriverCode();
+            GroupingDishesDriverCode();
+
             #region Recursion Problems
             //FibonnaciSeriesDriverCode();
             //StrCpyDriverCode();
@@ -108,6 +113,50 @@ namespace LeetCode
             //CountConsonantsClassDriverCode();
             // CombinationInAstringOfDigitsDriverCode();
             #endregion
+        }
+
+        private static void GroupingDishesDriverCode()
+        {
+            string[][] dishes = new string[4][];
+            dishes[0] = new string[] { "Salad", "Tomato", "Cucumber", "Salad", "Sauce" };
+            dishes[1] = new string[] { "Pizza", "Tomato", "Sausage", "Sauce", "Dough" };
+            dishes[2] = new string[] { "Quesadilla", "Chicken", "Cheese", "Sauce" };
+            dishes[3] = new string[] { "Sandwich", "Salad", "Bread", "Tomato", "Cheese" };
+            GroupingDishes groupingDishes = new GroupingDishes();
+            groupingDishes.groupingDishes(dishes);
+        }
+
+        private static void RemoveFromLinkedListDriverCode()
+        {
+            RemoveFromLinkedList removeFromLinkedList = new RemoveFromLinkedList();
+            ListNode list =
+                new ListNode(7,
+                new ListNode(7,
+                new ListNode(7,
+                new ListNode(7, null))));
+            removeFromLinkedList.RemoveElements(list, 7);
+        }
+
+        private static void PalindromicLinkedListDriverCode()
+        {
+            PalindromicLinkedList palindromicLinkedList = new PalindromicLinkedList(new ReverseLinkedList());
+            ListNode list =
+                new ListNode(7,
+                new ListNode(7,
+                new ListNode(7,
+                new ListNode(7, null))));
+            palindromicLinkedList.IsPalindrome(list);
+        }
+
+        private static void ReverseLinkedListDriverCode()
+        {
+            ReverseLinkedList reverseLinkedList = new ReverseLinkedList();
+            ListNode list = 
+                new ListNode(1,
+                new ListNode(2,
+                new ListNode(3,
+                new ListNode(4, null))));
+            reverseLinkedList.ReverseLL(list);
         }
 
         private static void DebtCoverDriverCode()
@@ -756,9 +805,22 @@ namespace LeetCode
         static void MergeSortedListsDriverCode()
         {
             MergeSortedList mergeSortedList = new MergeSortedList();
-            mergeSortedList.CreateSampleList(new Queue<int>(), mergeSortedList.l1);
-            mergeSortedList.CreateSampleList(new Queue<int>(), mergeSortedList.l2);
-            mergeSortedList.MergeTwoLists(mergeSortedList.l1, mergeSortedList.l2);
+            // mergeSortedList.CreateSampleList(new Queue<int>(new int[] { 5 })  , mergeSortedList.l1);
+            //mergeSortedList.CreateSampleList(new Queue<int>(new int[] { 1,3,4}) , mergeSortedList.l2);
+            //mergeSortedList.MergeTwoLists(mergeSortedList.l1, mergeSortedList.l2);
+            //mergeSortedList.l1 =
+            //     new ListNode (4, null);
+            //mergeSortedList.l2 =
+            //     new ListNode(1, null);
+            mergeSortedList.l2 =
+               new ListNode(1,
+               new ListNode(3,
+               new ListNode(4)));
+            mergeSortedList.l1 =
+            new ListNode(1,
+            new ListNode(2,
+            new ListNode(4)));
+            mergeSortedList.MergeTwoListsWithoutQueue(mergeSortedList.l1, mergeSortedList.l2);
 
         }
         static void RemoveDuplicatesFromSortedArrayDriverCode()

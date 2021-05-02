@@ -8,7 +8,7 @@ namespace LeetCode
     {
         public ListNode l1 = new ListNode();
         public ListNode l2 = new ListNode();
-  
+
         /// <summary>
         /// if both list are null return null
         /// if one list is not null return list
@@ -77,10 +77,69 @@ namespace LeetCode
             }
             return l3;
         }
-    
+
+        public ListNode MergeTwoListsWithoutQueue(ListNode l1, ListNode l2)
+        {
+            var pointer1 = l1;
+            ListNode result = new ListNode();
+            var temp = result;
+            if (l1 == null && l2 != null)
+            {
+                return l2;
+            }
+            if (l1 != null && l2 == null)
+            {
+                return l1;
+            }
+            if(l1.val<=l2.val)
+            {
+                result.val = l1.val;
+                l1 = l1.next;
+                
+            }
+            else
+            {
+                result.val = l2.val;
+                l2 = l2.next;
+            }
+            while(l1!=null && l2!=null)
+            {
+                if(l1.val<l2.val)
+                {
+                    result.next = new ListNode(l1.val);
+                    result = result.next;
+                    l1 = l1.next;
+                }
+                else if(l1.val>l2.val)
+                {
+                    result.next = new ListNode(l2.val);
+                    result = result.next;
+                    l2 = l2.next;
+                }
+                else if(l1.val==l2.val)
+                {
+                    result.next = new ListNode(l1.val);
+                    l1 = l1.next;
+                    result = result.next;
+                    result.next = new ListNode(l2.val);
+                    l2 = l2.next;
+                    result = result.next;
+                }
+            }
+            if (l1 != null)
+            {
+                result.next = l1;
+            }
+            else if(l2!=null)
+            {
+                result.next = l2;
+            }
+            return temp;
+        }
+
         public ListNode CreateSampleList(Queue<int> queue, ListNode listNode)
         {
-            
+
             var templist = listNode;
             while (queue.Count > 0)
             {
