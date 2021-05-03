@@ -103,8 +103,10 @@ namespace LeetCode
             //ReverseLinkedListDriverCode();
             // PalindromicLinkedListDriverCode();
             //RemoveFromLinkedListDriverCode();
-            GroupingDishesDriverCode();
-
+            //GroupingDishesDriverCode();
+            //ContainCloseNumsClassDriverCode();
+            //PossibleSumsClassDriverCode();
+            CountCloudsClassDriverCode();
             #region Recursion Problems
             //FibonnaciSeriesDriverCode();
             //StrCpyDriverCode();
@@ -113,6 +115,32 @@ namespace LeetCode
             //CountConsonantsClassDriverCode();
             // CombinationInAstringOfDigitsDriverCode();
             #endregion
+        }
+
+        private static void CountCloudsClassDriverCode()
+        {
+            CountCloudsClass countCloudsClass = new CountCloudsClass();
+            char[][] skyMap = new char[4][]
+            {
+                new char[]{'0', '1', '1', '0', '1'},
+                 new char[] { '0', '1', '1', '1', '1' },
+                 new char[] { '0', '0', '0', '0', '1' },
+                  new char[] { '1', '0', '0', '1', '1' }
+            };
+            //countCloudsClass.countClouds(skyMap);
+            countCloudsClass.countClouds(new char[0][]);
+        }
+
+        private static void PossibleSumsClassDriverCode()
+        {
+            PossibleSumsClass possibleSumsClass = new PossibleSumsClass();
+            possibleSumsClass.possibleSums(new int[] { 1,2}, new int[] { 50000,2});
+        }
+
+        private static void ContainCloseNumsClassDriverCode()
+        {
+            ContainCloseNumsClass containCloseNumsClass = new ContainCloseNumsClass();
+            containCloseNumsClass.containsCloseNums(new int[] { 0, 1, 2, 3, 5, 2 }, 3);
         }
 
         private static void GroupingDishesDriverCode()
