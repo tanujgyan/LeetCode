@@ -5,6 +5,7 @@
 public class MinStack
 {
     List<int> stacklist;
+    Stack<int> minValueTracker = new Stack<int>();
     /** initialize your data structure here. */
     public MinStack()
     {
@@ -14,11 +15,27 @@ public class MinStack
     public void Push(int val)
     {
         stacklist.Insert(0, val);
+        if(minValueTracker.Count==0)
+        {
+            minValueTracker.Push(val);
+        }
+        else
+        {
+            if(minValueTracker.Peek()>val)
+            {
+                minValueTracker.Push(val);
+            }
+            else
+            {
+                minValueTracker.Push(minValueTracker.Peek());
+            }
+        }
     }
 
     public void Pop()
     {
         stacklist.RemoveAt(0);
+        minValueTracker.Pop();
     }
 
     public int Top()
@@ -28,16 +45,17 @@ public class MinStack
 
     public int GetMin()
     {
-        int min = stacklist[0];
-        for (int i = 1; i < stacklist.Count; i++)
-        {
-            if (stacklist[i] < min)
-            {
-                min = stacklist[i];
-            }
-            // stacklist.Remove(stacklist[i]);
-        }
-        return min;
+        return minValueTracker.Peek();
+        //int min = stacklist[0];
+        //for (int i = 1; i < stacklist.Count; i++)
+        //{
+        //    if (stacklist[i] < min)
+        //    {
+        //        min = stacklist[i];
+        //    }
+        //    // stacklist.Remove(stacklist[i]);
+        //}
+        //return min;
     }
 }
 

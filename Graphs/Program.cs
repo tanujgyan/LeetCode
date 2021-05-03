@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Graphs
 {
@@ -7,7 +8,26 @@ namespace Graphs
         static void Main(string[] args)
         {
            //NumberOfConnectedNodesInUnconnectedgraphDriverCode();
-            TownJudgeDriverCode();
+            //TownJudgeDriverCode();
+            CloneGraphsDriverCOde();
+        }
+
+        private static void CloneGraphsDriverCOde()
+        {
+            CloneGraphs cloneGraphs = new CloneGraphs();
+            Node node1 = new Node(1);
+            Node node2 = new Node(2);
+            Node node3 = new Node(3);
+            Node node4 = new Node(4);
+            node1.neighbors.Add(node2);
+            node1.neighbors.Add(node4);
+            node2.neighbors.Add(node3);
+            node2.neighbors.Add(node1);
+            node3.neighbors.Add(node4);
+            node3.neighbors.Add(node2);
+            node4.neighbors.Add(node1);
+            node4.neighbors.Add(node3);
+            cloneGraphs.CloneGraph(node1);
         }
 
         private static void TownJudgeDriverCode()

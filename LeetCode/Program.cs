@@ -107,6 +107,7 @@ namespace LeetCode
             //ContainCloseNumsClassDriverCode();
             //PossibleSumsClassDriverCode();
             CountCloudsClassDriverCode();
+            FirstMissingPositiveClassDriverCode();
             #region Recursion Problems
             //FibonnaciSeriesDriverCode();
             //StrCpyDriverCode();
@@ -115,6 +116,12 @@ namespace LeetCode
             //CountConsonantsClassDriverCode();
             // CombinationInAstringOfDigitsDriverCode();
             #endregion
+        }
+
+        private static void FirstMissingPositiveClassDriverCode()
+        {
+            FirstMissingPositiveClass firstMissingPositiveClass = new FirstMissingPositiveClass();
+            firstMissingPositiveClass.FirstMissingPositive(new int[] { 1 });
         }
 
         private static void CountCloudsClassDriverCode()
