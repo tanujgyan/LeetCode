@@ -106,8 +106,13 @@ namespace LeetCode
             //GroupingDishesDriverCode();
             //ContainCloseNumsClassDriverCode();
             //PossibleSumsClassDriverCode();
-            CountCloudsClassDriverCode();
-            FirstMissingPositiveClassDriverCode();
+            // CountCloudsClassDriverCode();
+            //FirstMissingPositiveClassDriverCode();
+            // TargetSumDriverCode();
+            //PartitionSumDriverCode();
+            //CopyListWithRandomPointerDriverCode();
+            //LevelOrderTraversalOfBTDriverCode();
+            ValidBSTDriverCode();
             #region Recursion Problems
             //FibonnaciSeriesDriverCode();
             //StrCpyDriverCode();
@@ -116,6 +121,66 @@ namespace LeetCode
             //CountConsonantsClassDriverCode();
             // CombinationInAstringOfDigitsDriverCode();
             #endregion
+        }
+
+        private static void ValidBSTDriverCode()
+        {
+            ValidBST validBST = new ValidBST();
+            TreeNode treeNode = new TreeNode();
+            treeNode.val = -2147483648;
+            //treeNode.left = new TreeNode(-57);
+            treeNode.right = new TreeNode(2147483647);
+            //treeNode.left.left = new TreeNode(0);
+            //treeNode.left.right = new TreeNode(58);
+            ////treeNode.right.left = new TreeNode(4);
+            ////treeNode.right.right = new TreeNode(6);
+            ////treeNode.left.left.left = new TreeNode(4);
+            ////treeNode.right.right.right = new TreeNode(1);
+            //treeNode.left.right.left = new TreeNode(31);
+            validBST.IsValidBST(treeNode);
+        }
+
+        private static void LevelOrderTraversalOfBTDriverCode()
+        {
+            LevelOrderTraversalOfBT levelOrderTraversalOfBT = new LevelOrderTraversalOfBT();
+            TreeNode treeNode = new TreeNode();
+            treeNode.val = 3;
+            treeNode.left = new TreeNode(6);
+            treeNode.right = new TreeNode(9);
+            treeNode.left.left = new TreeNode(5);
+            treeNode.left.right = new TreeNode(8);
+            treeNode.right.left = new TreeNode(10);
+            treeNode.right.right = new TreeNode(11);
+            treeNode.left.left.left = new TreeNode(21);
+            treeNode.right.right.right = new TreeNode(22);
+            levelOrderTraversalOfBT.LevelOrder(treeNode);
+
+        }
+
+        private static void CopyListWithRandomPointerDriverCode()
+        {
+            CopyListWithRandomPointer copyListWithRandomPointer = new CopyListWithRandomPointer();
+            Node list = new Node(1);
+            list.next = new Node(2);
+            list.random = list.next;
+            list.next.next = new Node(3);
+            list.next.next.next = new Node(4);
+            list.random.random = list.next.next;
+            copyListWithRandomPointer.CopyRandomList(list);
+        }
+
+        private static void PartitionSumDriverCode()
+        {
+            PartitionSum partitionSum = new PartitionSum();
+            partitionSum.CanPartition(new int[] { 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 99, 97 });
+            //partitionSum.CanPartition(new int[] { 14,9,8,4,3,2 });
+            //partitionSum.CanPartition(new int[] { 1,5,11,5 });
+        }
+
+        private static void TargetSumDriverCode()
+        {
+            TargetSum targetSum = new TargetSum();
+            targetSum.TargetSumTopDown(new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 1 }, 1);
         }
 
         private static void FirstMissingPositiveClassDriverCode()

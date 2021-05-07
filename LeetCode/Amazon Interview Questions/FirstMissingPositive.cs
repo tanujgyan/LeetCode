@@ -5,6 +5,9 @@ using System.Text;
 
 namespace LeetCode.Amazon_Interview_Questions
 {
+    /// <summary>
+    /// https://leetcode.com/problems/first-missing-positive/
+    /// </summary>
     class FirstMissingPositiveClass
     {
         public int FirstMissingPositive(int[] nums)
