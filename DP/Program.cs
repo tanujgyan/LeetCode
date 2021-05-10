@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DP.Aditya_Verma;
+using System;
 using System.Collections.Generic;
 
 namespace DP
@@ -13,9 +14,73 @@ namespace DP
             //WordBreakClassDriverCode();
             //DivisorGameClassDriverCode();
             //CostOfStairsClassDriverCode();
-           //CountSortedVowelsDriverCode();
+            //CountSortedVowelsDriverCode();
             //MaxSumArrayDriverCode();
-            LongestPalindromicSubstringDriverCode();
+            //LongestPalindromicSubstringDriverCode();
+            //LongestCommonSubsequenceDriverCode();
+            //LongestCommonSubstringDriverCode();
+            //DeleteOperationsForTwoStringsDriverCode();
+            //LongestPalindromicSubsequenceDriverCode();
+            //PrintShortestCommonSupersequenceDriverCode();
+            //MCMDriverCode();
+            //PalindromicPartitioningDriverCode();
+            //BooleanParanthesisDriverCode();
+            CountDistinctSubsequencesDriverCode();
+        }
+
+        private static void CountDistinctSubsequencesDriverCode()
+        {
+            CountDistinctSubsequences countDistinctSubsequences = new CountDistinctSubsequences();
+            countDistinctSubsequences.NumDistinct("babgbagh", "bag");
+        }
+
+        private static void BooleanParanthesisDriverCode()
+        {
+            BooleanParanthesis booleanParanthesis = new BooleanParanthesis();
+            //booleanParanthesis.NumberOfWays("T^F&T");
+            booleanParanthesis.NumberOfWays("T&T^F");
+        }
+
+        private static void PalindromicPartitioningDriverCode()
+        {
+            PalindromicPartitioning palindromicPartitioning = new PalindromicPartitioning();
+            palindromicPartitioning.NumberOfCuts("aabbc");
+        }
+
+        private static void MCMDriverCode()
+        {
+            MCM mCM = new MCM();
+            mCM.MatrixChainOrder(new int[] { 10, 30, 5, 60 });
+        }
+
+        private static void PrintShortestCommonSupersequenceDriverCode()
+        {
+            PrintShortestCommonSupersequence printShortestCommonSupersequence = new PrintShortestCommonSupersequence();
+            printShortestCommonSupersequence.ShortestCommonSupersequence("geek", "rekefd");
+        }
+
+        private static void LongestPalindromicSubsequenceDriverCode()
+        {
+            LongestPalindromicSubsequence longestPalindromicSubsequence = new LongestPalindromicSubsequence();
+            longestPalindromicSubsequence.LongestPalindromeSubseq("bbbab");
+        }
+
+        private static void DeleteOperationsForTwoStringsDriverCode()
+        {
+            DeleteOperationsForTwoStrings deleteOperationsForTwoStrings = new DeleteOperationsForTwoStrings();
+            deleteOperationsForTwoStrings.MinDistance("leetcode", "etco");
+        }
+
+        private static void LongestCommonSubstringDriverCode()
+        {
+            LongestCommonSubstring longestCommonSubstring = new LongestCommonSubstring();
+            longestCommonSubstring.LongestCommonSubstringMethod("yuytraaaa", "jkmnsyfsxtry");
+        }
+
+        private static void LongestCommonSubsequenceDriverCode()
+        {
+            LongestCommonSubsequence longestCommonSubsequence = new LongestCommonSubsequence();
+            longestCommonSubsequence.LongestCommonSubsequenceTopDown("bbbb", "bbb");
         }
 
         private static void LongestPalindromicSubstringDriverCode()

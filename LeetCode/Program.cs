@@ -113,7 +113,9 @@ namespace LeetCode
             //CopyListWithRandomPointerDriverCode();
             //LevelOrderTraversalOfBTDriverCode();
             //ValidBSTDriverCode();
-            ReverseWordsClassDriverCode();
+            //ReverseWordsClassDriverCode();
+           // PrintAllSubsetsDriverCode();
+            FirstAndLastOfArrayDriverCode();
             #region Recursion Problems
             //FibonnaciSeriesDriverCode();
             //StrCpyDriverCode();
@@ -122,6 +124,18 @@ namespace LeetCode
             //CountConsonantsClassDriverCode();
             // CombinationInAstringOfDigitsDriverCode();
             #endregion
+        }
+
+        private static void FirstAndLastOfArrayDriverCode()
+        {
+            FirstAndLastOfArray firstAndLastOfArray = new FirstAndLastOfArray();
+            firstAndLastOfArray.SearchRange(new int[] { 1,2,2,2,2,2,2,3,4,5,6,6,6,6,6,6 }, 6);
+        }
+
+        private static void PrintAllSubsetsDriverCode()
+        {
+            PrintAllSubsets printAllSubsets = new PrintAllSubsets();
+            printAllSubsets.Subsets(new int[] { 2, 3, 4 });
         }
 
         private static void ReverseWordsClassDriverCode()

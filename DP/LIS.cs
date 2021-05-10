@@ -4,6 +4,9 @@ using System.Text;
 
 namespace DP
 {
+    /// <summary>
+    /// https://leetcode.com/problems/longest-increasing-subsequence/
+    /// </summary>
     class LIS
     {
         public int CalculateLIS(int[] n)
