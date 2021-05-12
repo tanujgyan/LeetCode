@@ -14,6 +14,8 @@ namespace LeetCode
 {
     class Program
     {
+        private static HeapOperations heapOperations;
+
         static void Main(string[] args)
         {
             //TwoSumDriverCode();
@@ -114,8 +116,20 @@ namespace LeetCode
             //LevelOrderTraversalOfBTDriverCode();
             //ValidBSTDriverCode();
             //ReverseWordsClassDriverCode();
-           // PrintAllSubsetsDriverCode();
-            FirstAndLastOfArrayDriverCode();
+            // PrintAllSubsetsDriverCode();
+            //FirstAndLastOfArrayDriverCode();
+            //KPermutationDriverCode();
+            //PrintAllPermutationsDriverCode();
+            //GenerateParanthesisDriverCode();
+            //HeapOperationsDriverCode();
+            //PrintCombinationsDFSDriverCode();
+            //SearchRotatedArrayDriverCode();
+            //KthLargestElementDriverCOde();
+            //FlattenBinaryTreetoDLLDriverCode();
+            //MakeMinimalBSTDriverCode();
+            //DiameterOfBinTreeDriverCode();
+            SumRootToLeafNodesDriverCode();
+
             #region Recursion Problems
             //FibonnaciSeriesDriverCode();
             //StrCpyDriverCode();
@@ -124,6 +138,102 @@ namespace LeetCode
             //CountConsonantsClassDriverCode();
             // CombinationInAstringOfDigitsDriverCode();
             #endregion
+        }
+
+        private static void SumRootToLeafNodesDriverCode()
+        {
+            TreeNode treeNode = new TreeNode();
+            treeNode.val = 1;
+            treeNode.left = new TreeNode(9);
+            treeNode.right = new TreeNode(20);
+            treeNode.left.left = new TreeNode(3);
+            treeNode.left.right = new TreeNode(5);
+            treeNode.right.left = new TreeNode(15);
+            treeNode.right.right = new TreeNode(7);
+            treeNode.right.right.right = new TreeNode(22);
+            SumRootToLeafNodes sumRootToLeafNodes = new SumRootToLeafNodes();
+            sumRootToLeafNodes.SumNumbers(treeNode);
+        }
+
+        private static void DiameterOfBinTreeDriverCode()
+        {
+            TreeNode treeNode = new TreeNode();
+            treeNode.val = -10;
+            treeNode.left = new TreeNode(9);
+            treeNode.right = new TreeNode(20);
+            //treeNode.left.left = new TreeNode(3);
+            //treeNode.left.right = new TreeNode(5);
+            treeNode.right.left = new TreeNode(15);
+            treeNode.right.right = new TreeNode(7);
+            //treeNode.left.left.left = new TreeNode(21);
+            //treeNode.right.right.right = new TreeNode(22);
+            DiameterOfBinTree diameterOfBinTree = new DiameterOfBinTree();
+            diameterOfBinTree.MaxSum(treeNode);
+        }
+
+        private static void MakeMinimalBSTDriverCode()
+        {
+            MakeMinimalBST makeMinimalBST = new MakeMinimalBST();
+            makeMinimalBST.Minimal(new int[] { 1, 2, 3,4,5 });
+        }
+
+        private static void FlattenBinaryTreetoDLLDriverCode()
+        {
+            FlattenBinaryTreetoDLL flattenBinaryTreetoDLL = new FlattenBinaryTreetoDLL();
+            TreeNode treeNode = new TreeNode();
+            treeNode.val = 1;
+            treeNode.left = new TreeNode(2);
+            treeNode.right = new TreeNode(5);
+            treeNode.left.left = new TreeNode(3);
+            treeNode.left.right = new TreeNode(4);
+            //treeNode.right.left = new TreeNode(10);
+            treeNode.right.right = new TreeNode(6);
+            //treeNode.left.left.left = new TreeNode(21);
+            //treeNode.right.right.right = new TreeNode(22);
+            flattenBinaryTreetoDLL.Flatten(treeNode);
+        }
+
+        private static void KthLargestElementDriverCOde()
+        {
+            KthLargestElement kthLargestElement = new KthLargestElement();
+            kthLargestElement.FindKthLargest(new int[] { 3, 2, 3, 1, 2, 4, 5, 5, 6, 7, 7, 8, 2, 3, 1, 1, 1, 10, 11, 5, 6, 2, 4, 7, 8, 5, 6 }, 20);
+        }
+
+        private static void SearchRotatedArrayDriverCode()
+        {
+            SearchRotatedArray searchRotatedArray = new SearchRotatedArray();
+            searchRotatedArray.Search(new int[] { 57, 58, 59, 62, 63, 66, 68, 72, 73, 74, 75, 76, 77, 78, 80, 81, 86, 95, 96, 97, 98, 100, 101, 102, 103, 110, 119, 120, 121, 123, 125, 126, 127, 132, 136, 144, 145, 148, 149, 151, 152, 160, 161, 163, 166, 168, 169, 170, 173, 174, 175, 178, 182, 188, 189, 192, 193, 196, 198, 199, 200, 201, 202, 212, 218, 219, 220, 224, 225, 229, 231, 232, 234, 237, 238, 242, 248, 249, 250, 252, 253, 254, 255, 257, 260, 266, 268, 270, 273, 276, 280, 281, 283, 288, 290, 291, 292, 294, 295, 298, 299, 4, 10, 13, 15, 16, 17, 18, 20, 22, 25, 26, 27, 30, 31, 34, 38, 39, 40, 47, 53, 54 },30);
+        }
+
+        private static void PrintCombinationsDFSDriverCode()
+        {
+            PrintCombinationsDFS printCombinationsDFS = new PrintCombinationsDFS();
+            printCombinationsDFS.print(2);
+        }
+
+        private static void HeapOperationsDriverCode()
+        {
+           var heapOperations = new HeapOperations();
+            heapOperations.HeapOperationsMethod();
+        }
+
+        private static void GenerateParanthesisDriverCode()
+        {
+            GenerateParanthesis generateParanthesis = new GenerateParanthesis();
+            generateParanthesis.GenerateParenthesis(8);
+        }
+
+        private static void PrintAllPermutationsDriverCode()
+        {
+            PrintAllPermutations printAllPermutations = new PrintAllPermutations();
+            //printAllPermutations.PrintPerm("abc");
+            printAllPermutations.PrintPermUsingHeap("abc",3,3);
+        }
+
+        private static void KPermutationDriverCode()
+        {
+            KPermutation kPermutation = new KPermutation();
+            kPermutation.GetPermutation(4, 14);
         }
 
         private static void FirstAndLastOfArrayDriverCode()

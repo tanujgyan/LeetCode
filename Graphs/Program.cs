@@ -9,9 +9,19 @@ namespace Graphs
         {
            //NumberOfConnectedNodesInUnconnectedgraphDriverCode();
             //TownJudgeDriverCode();
-            CloneGraphsDriverCOde();
+            //CloneGraphsDriverCOde();
+            RouteBetweenTwoNodesDriverCode();
         }
+        private static void RouteBetweenTwoNodesDriverCode()
+        {
+            int[][] edges = new int[4][];
 
+            edges[0] = new int[] { 1, 2 };
+            edges[1] = new int[] { 2, 3 };
+            edges[2] = new int[] { 1, 4 };
+            edges[3] = new int[] { 4, 6 };
+            RouteBetweenTwoNodes.RouteExists(2, 6, edges);
+        }
         private static void CloneGraphsDriverCOde()
         {
             CloneGraphs cloneGraphs = new CloneGraphs();
