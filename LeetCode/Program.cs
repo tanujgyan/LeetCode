@@ -128,8 +128,10 @@ namespace LeetCode
             //FlattenBinaryTreetoDLLDriverCode();
             //MakeMinimalBSTDriverCode();
             //DiameterOfBinTreeDriverCode();
-            SumRootToLeafNodesDriverCode();
-
+            //SumRootToLeafNodesDriverCode();
+            //PathSum3DriverCode();
+            //RotateListNodeDriverCode();
+            EliminationGameDriverCode();
             #region Recursion Problems
             //FibonnaciSeriesDriverCode();
             //StrCpyDriverCode();
@@ -138,6 +140,41 @@ namespace LeetCode
             //CountConsonantsClassDriverCode();
             // CombinationInAstringOfDigitsDriverCode();
             #endregion
+        }
+
+        private static void EliminationGameDriverCode()
+        {
+            EliminationGame eliminationGame = new EliminationGame();
+            eliminationGame.LastRemaining(4);
+        }
+
+        private static void RotateListNodeDriverCode()
+        {
+            RotateListNode rotateListNode = new RotateListNode();
+            ListNode l = new ListNode(1);
+            l.next= new ListNode(2);
+            l.next.next = new ListNode(3);
+            l.next.next.next = new ListNode(4);
+            l.next.next.next.next = new ListNode(5);
+            rotateListNode.RotateRight(l, 6);
+        }
+
+        private static void PathSum3DriverCode()
+        {
+            PathSum3 pathSum3 = new PathSum3();
+            TreeNode treeNode = new TreeNode();
+            treeNode.val = 5;
+            treeNode.left = new TreeNode(4);
+            //treeNode.right = new TreeNode(-3);
+            treeNode.left.left = new TreeNode(4);
+            treeNode.left.right = new TreeNode(4);
+            //treeNode.right.right = new TreeNode(11);
+           
+           // treeNode.right.right.right = new TreeNode(22);
+            treeNode.left.left.left = new TreeNode(4);
+            treeNode.left.right.right = new TreeNode(4);
+            treeNode.left.left.right = new TreeNode(4);
+            pathSum3.CalculateUnivaluePath(treeNode);
         }
 
         private static void SumRootToLeafNodesDriverCode()
