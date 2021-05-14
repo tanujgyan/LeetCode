@@ -131,7 +131,10 @@ namespace LeetCode
             //SumRootToLeafNodesDriverCode();
             //PathSum3DriverCode();
             //RotateListNodeDriverCode();
-            EliminationGameDriverCode();
+            //EliminationGameDriverCode();
+            //LinkedListINBTDriverCode();
+            RotateStringClassDriverCode();
+            LinkedListCycleDriverCode();
             #region Recursion Problems
             //FibonnaciSeriesDriverCode();
             //StrCpyDriverCode();
@@ -140,6 +143,46 @@ namespace LeetCode
             //CountConsonantsClassDriverCode();
             // CombinationInAstringOfDigitsDriverCode();
             #endregion
+        }
+
+        private static void LinkedListCycleDriverCode()
+        {
+            LinkedListCycle linkedListCycle = new LinkedListCycle();
+            ListNode l = new ListNode(1);
+            l.next = new ListNode(2);
+            l.next.next = new ListNode(4);
+            l.next.next.next = l;
+            linkedListCycle.HasCycle(l);
+        }
+
+        private static void RotateStringClassDriverCode()
+        {
+            RotateStringClass rotateStringClass = new RotateStringClass();
+            rotateStringClass.RotateString("bbbacddceeb", "ceebbbbacdd");
+        }
+
+        private static void LinkedListINBTDriverCode()
+        {
+            LinkedListINBT linkedListINBT = new LinkedListINBT();
+            TreeNode tree = new TreeNode(1);
+            //left subtree
+            tree.left = new TreeNode(4);
+            tree.left.right = new TreeNode(2);
+            tree.left.right.left = new TreeNode(1);
+
+            //right subtree
+            tree.right = new TreeNode(4);
+            tree.right.left = new TreeNode(2);
+            tree.right.left.left = new TreeNode(6);
+            tree.right.left.right = new TreeNode(8);
+            tree.right.left.right.left = new TreeNode(1);
+            tree.right.left.right.right = new TreeNode(3);
+
+            ListNode list = new ListNode(2);
+            list.next = new ListNode(8);
+            list.next.next = new ListNode(15);
+            //list.next.next.next = new ListNode(15);
+            linkedListINBT.IsLinkedListInBT(tree, list);
         }
 
         private static void EliminationGameDriverCode()
