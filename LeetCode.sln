@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DP", "DP\DP.csproj", "{E63E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Graphs", "Graphs\Graphs.csproj", "{C7CCE3E5-412D-448F-97AB-AB477C41CFF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeapImplementation", "HeapImplementation\HeapImplementation.csproj", "{450737E2-FDA8-4044-9F32-69524504C147}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeapImplementation", "HeapImplementation\HeapImplementation.csproj", "{450737E2-FDA8-4044-9F32-69524504C147}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binary Tree", "Binary Tree\Binary Tree.csproj", "{83C2EB0F-B11F-437C-867D-73154B9A6E6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{450737E2-FDA8-4044-9F32-69524504C147}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{450737E2-FDA8-4044-9F32-69524504C147}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{450737E2-FDA8-4044-9F32-69524504C147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83C2EB0F-B11F-437C-867D-73154B9A6E6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83C2EB0F-B11F-437C-867D-73154B9A6E6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83C2EB0F-B11F-437C-867D-73154B9A6E6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83C2EB0F-B11F-437C-867D-73154B9A6E6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

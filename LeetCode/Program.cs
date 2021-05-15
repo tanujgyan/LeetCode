@@ -16,8 +16,7 @@ namespace LeetCode
     {
         private static HeapOperations heapOperations;
 
-        static void Main(string[] args)
-        {
+        static void Main(string[] args) =>
             //TwoSumDriverCode();
             //ReverseIntegerDriverCode();
             //PalindromeIntegerDriverCode();
@@ -133,17 +132,19 @@ namespace LeetCode
             //RotateListNodeDriverCode();
             //EliminationGameDriverCode();
             //LinkedListINBTDriverCode();
-            RotateStringClassDriverCode();
-            LinkedListCycleDriverCode();
-            #region Recursion Problems
-            //FibonnaciSeriesDriverCode();
-            //StrCpyDriverCode();
-            //FirstUpperCaseCharacterDriverCode();
-            //LengthOfStringUsingRecursionDriverCode();
-            //CountConsonantsClassDriverCode();
-            // CombinationInAstringOfDigitsDriverCode();
-            #endregion
+            //RotateStringClassDriverCode();
+            //LinkedListCycleDriverCode();
+            RotateArrayDriverCode();
+
+        private static void RotateArrayDriverCode()
+        {
+            RotateArray rotateArray = new RotateArray();
+            rotateArray.Rotate(new int[] { 1,2,3,4,5,6,7 }, 4);
         }
+        #region Recursion Problems
+        //FibonnaciSeriesDriverCode();//StrCpyDriverCode();//FirstUpperCaseCharacterDriverCode();//LengthOfStringUsingRecursionDriverCode();//CountConsonantsClassDriverCode();// CombinationInAstringOfDigitsDriverCode();
+        #endregion
+
 
         private static void LinkedListCycleDriverCode()
         {
