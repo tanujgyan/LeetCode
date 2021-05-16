@@ -16,7 +16,8 @@ namespace LeetCode
     {
         private static HeapOperations heapOperations;
 
-        static void Main(string[] args) =>
+        static void Main(string[] args)
+        {
             //TwoSumDriverCode();
             //ReverseIntegerDriverCode();
             //PalindromeIntegerDriverCode();
@@ -134,12 +135,45 @@ namespace LeetCode
             //LinkedListINBTDriverCode();
             //RotateStringClassDriverCode();
             //LinkedListCycleDriverCode();
-            RotateArrayDriverCode();
+            //RotateArrayDriverCode();
+            MaximalSubsquareDriverCode();
+        }
+
+        private static void MaximalSubsquareDriverCode()
+        {
+            MaximalSubsquare maximalSubsquare = new MaximalSubsquare();
+            char[][] c = new char[9][];
+            //for (int i = 0; i < 4; i++)
+            //{
+            //    c[i] = new char[5];
+            //    for (int j = 0; j < 5; j++)
+            //    {
+            //        c[i][j] = '1';
+            //    }
+            //}
+            //c[0][1] = '0';
+            //c[0][3] = '0';
+            //c[0][4] = '0';
+            //c[1][1] = '0';
+            //c[3][1] = '0';
+            //c[3][2] = '0';
+            //c[3][4] = '0';
+            c[0] = new char[] { '0', '1', '1', '0', '0', '1', '0', '1', '0', '1' };
+            c[1] = new char[] { '0', '0', '1', '0', '1', '0', '1', '0', '1', '0' };
+            c[2] = new char[] { '1', '0', '0', '0', '0', '1', '0', '1', '1', '0' };
+            c[3] = new char[] { '0', '1', '1', '1', '1', '1', '1', '0', '1', '0' };
+            c[4] = new char[] { '0', '0', '1', '1', '1', '1', '1', '1', '1', '0' };
+            c[5] = new char[] { '1', '1', '0', '1', '0', '1', '1', '1', '1', '0' };
+            c[6] = new char[] { '0', '0', '0', '1', '1', '0', '0', '0', '1', '0' };
+            c[7] = new char[] { '1', '1', '0', '1', '1', '0', '0', '1', '1', '1' };
+            c[8] = new char[] { '0', '1', '0', '1', '1', '0', '1', '0', '1', '1' };
+            maximalSubsquare.MaximalSquare(c);
+        }
 
         private static void RotateArrayDriverCode()
         {
             RotateArray rotateArray = new RotateArray();
-            rotateArray.Rotate(new int[] { 1,2,3,4,5,6,7 }, 4);
+            rotateArray.Rotate(new int[] { 1, 2, 3, 4, 5, 6, 7 }, 4);
         }
         #region Recursion Problems
         //FibonnaciSeriesDriverCode();//StrCpyDriverCode();//FirstUpperCaseCharacterDriverCode();//LengthOfStringUsingRecursionDriverCode();//CountConsonantsClassDriverCode();// CombinationInAstringOfDigitsDriverCode();
@@ -196,7 +230,7 @@ namespace LeetCode
         {
             RotateListNode rotateListNode = new RotateListNode();
             ListNode l = new ListNode(1);
-            l.next= new ListNode(2);
+            l.next = new ListNode(2);
             l.next.next = new ListNode(3);
             l.next.next.next = new ListNode(4);
             l.next.next.next.next = new ListNode(5);
@@ -213,8 +247,8 @@ namespace LeetCode
             treeNode.left.left = new TreeNode(4);
             treeNode.left.right = new TreeNode(4);
             //treeNode.right.right = new TreeNode(11);
-           
-           // treeNode.right.right.right = new TreeNode(22);
+
+            // treeNode.right.right.right = new TreeNode(22);
             treeNode.left.left.left = new TreeNode(4);
             treeNode.left.right.right = new TreeNode(4);
             treeNode.left.left.right = new TreeNode(4);
@@ -255,7 +289,7 @@ namespace LeetCode
         private static void MakeMinimalBSTDriverCode()
         {
             MakeMinimalBST makeMinimalBST = new MakeMinimalBST();
-            makeMinimalBST.Minimal(new int[] { 1, 2, 3,4,5 });
+            makeMinimalBST.Minimal(new int[] { 1, 2, 3, 4, 5 });
         }
 
         private static void FlattenBinaryTreetoDLLDriverCode()
@@ -283,7 +317,7 @@ namespace LeetCode
         private static void SearchRotatedArrayDriverCode()
         {
             SearchRotatedArray searchRotatedArray = new SearchRotatedArray();
-            searchRotatedArray.Search(new int[] { 57, 58, 59, 62, 63, 66, 68, 72, 73, 74, 75, 76, 77, 78, 80, 81, 86, 95, 96, 97, 98, 100, 101, 102, 103, 110, 119, 120, 121, 123, 125, 126, 127, 132, 136, 144, 145, 148, 149, 151, 152, 160, 161, 163, 166, 168, 169, 170, 173, 174, 175, 178, 182, 188, 189, 192, 193, 196, 198, 199, 200, 201, 202, 212, 218, 219, 220, 224, 225, 229, 231, 232, 234, 237, 238, 242, 248, 249, 250, 252, 253, 254, 255, 257, 260, 266, 268, 270, 273, 276, 280, 281, 283, 288, 290, 291, 292, 294, 295, 298, 299, 4, 10, 13, 15, 16, 17, 18, 20, 22, 25, 26, 27, 30, 31, 34, 38, 39, 40, 47, 53, 54 },30);
+            searchRotatedArray.Search(new int[] { 57, 58, 59, 62, 63, 66, 68, 72, 73, 74, 75, 76, 77, 78, 80, 81, 86, 95, 96, 97, 98, 100, 101, 102, 103, 110, 119, 120, 121, 123, 125, 126, 127, 132, 136, 144, 145, 148, 149, 151, 152, 160, 161, 163, 166, 168, 169, 170, 173, 174, 175, 178, 182, 188, 189, 192, 193, 196, 198, 199, 200, 201, 202, 212, 218, 219, 220, 224, 225, 229, 231, 232, 234, 237, 238, 242, 248, 249, 250, 252, 253, 254, 255, 257, 260, 266, 268, 270, 273, 276, 280, 281, 283, 288, 290, 291, 292, 294, 295, 298, 299, 4, 10, 13, 15, 16, 17, 18, 20, 22, 25, 26, 27, 30, 31, 34, 38, 39, 40, 47, 53, 54 }, 30);
         }
 
         private static void PrintCombinationsDFSDriverCode()
@@ -294,7 +328,7 @@ namespace LeetCode
 
         private static void HeapOperationsDriverCode()
         {
-           var heapOperations = new HeapOperations();
+            var heapOperations = new HeapOperations();
             heapOperations.HeapOperationsMethod();
         }
 
@@ -308,7 +342,7 @@ namespace LeetCode
         {
             PrintAllPermutations printAllPermutations = new PrintAllPermutations();
             //printAllPermutations.PrintPerm("abc");
-            printAllPermutations.PrintPermUsingHeap("abc",3,3);
+            printAllPermutations.PrintPermUsingHeap("abc", 3, 3);
         }
 
         private static void KPermutationDriverCode()
@@ -320,7 +354,7 @@ namespace LeetCode
         private static void FirstAndLastOfArrayDriverCode()
         {
             FirstAndLastOfArray firstAndLastOfArray = new FirstAndLastOfArray();
-            firstAndLastOfArray.SearchRange(new int[] { 1,2,2,2,2,2,2,3,4,5,6,6,6,6,6,6 }, 6);
+            firstAndLastOfArray.SearchRange(new int[] { 1, 2, 2, 2, 2, 2, 2, 3, 4, 5, 6, 6, 6, 6, 6, 6 }, 6);
         }
 
         private static void PrintAllSubsetsDriverCode()
@@ -332,7 +366,7 @@ namespace LeetCode
         private static void ReverseWordsClassDriverCode()
         {
             ReverseWordsClass reverseWordsClass = new ReverseWordsClass();
-            Console.WriteLine(reverseWordsClass.ReverseWords("Alice does not even like bob")); 
+            Console.WriteLine(reverseWordsClass.ReverseWords("Alice does not even like bob"));
         }
 
         private static void ValidBSTDriverCode()
@@ -418,7 +452,7 @@ namespace LeetCode
         private static void PossibleSumsClassDriverCode()
         {
             PossibleSumsClass possibleSumsClass = new PossibleSumsClass();
-            possibleSumsClass.possibleSums(new int[] { 1,2}, new int[] { 50000,2});
+            possibleSumsClass.possibleSums(new int[] { 1, 2 }, new int[] { 50000, 2 });
         }
 
         private static void ContainCloseNumsClassDriverCode()
@@ -463,7 +497,7 @@ namespace LeetCode
         private static void ReverseLinkedListDriverCode()
         {
             ReverseLinkedList reverseLinkedList = new ReverseLinkedList();
-            ListNode list = 
+            ListNode list =
                 new ListNode(1,
                 new ListNode(2,
                 new ListNode(3,
@@ -490,7 +524,7 @@ namespace LeetCode
 
         private static void SherlockAndValidStringsDriverCode()
         {
-            Console.WriteLine(SherlockAndValidStrings.isValid("abcdefghhgfedecba")); 
+            Console.WriteLine(SherlockAndValidStrings.isValid("abcdefghhgfedecba"));
         }
 
         private static void TwoCharacterDriverCode()
@@ -522,7 +556,7 @@ namespace LeetCode
         private static void LargestRectangleClassDriverCode()
         {
             LargestRectangleClass largestRectangleClass = new LargestRectangleClass();
-            largestRectangleClass.LargestRectangleAreaStackAlgorithm(new int[] {2,4});
+            largestRectangleClass.LargestRectangleAreaStackAlgorithm(new int[] { 2, 4 });
         }
 
         private static void BalancedBracketsDriverCode()
@@ -533,19 +567,19 @@ namespace LeetCode
         private static void MaximumProductOfThreeNumbersDriverCode()
         {
             MaximumProductOfThreeNumbers maximumProductOfThreeNumbers = new MaximumProductOfThreeNumbers();
-            maximumProductOfThreeNumbers.MaximumProduct(new int[] { -1, -2, -3,-4});
+            maximumProductOfThreeNumbers.MaximumProduct(new int[] { -1, -2, -3, -4 });
         }
 
         private static void CountMatchesOfATournamentDriverCode()
         {
             CountMatchesOfATournament countMatchesOfATournament = new CountMatchesOfATournament();
-            Console.WriteLine(countMatchesOfATournament.NumberOfMatches(14)); 
+            Console.WriteLine(countMatchesOfATournament.NumberOfMatches(14));
         }
 
         private static void PairWithGivenProductClassDriverCode()
         {
             PairWithGivenProductClass pairWithGivenProductClass = new PairWithGivenProductClass();
-            Console.WriteLine(pairWithGivenProductClass.PairWithGivenProduct(new int[] { -10, 20, 9, 40 },-400)); 
+            Console.WriteLine(pairWithGivenProductClass.PairWithGivenProduct(new int[] { -10, 20, 9, 40 }, -400));
         }
 
         private static void SorroundedRegionsDriverCode()
@@ -556,10 +590,10 @@ namespace LeetCode
             //grid[1] = new char[] { 'X', 'O', 'O', 'X' };
             //grid[2] = new char[] { 'X', 'X', 'O', 'X'};
             //grid[3] = new char[] { 'X', 'O', 'X', 'X'};
-            grid[0] = new char[] { 'O', 'O', 'O'};
+            grid[0] = new char[] { 'O', 'O', 'O' };
             grid[1] = new char[] { 'O', 'O', 'O' };
             grid[2] = new char[] { 'O', 'O', 'O' };
-          
+
 
             sorrounded.Solve(grid);
         }
