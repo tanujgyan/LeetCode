@@ -5,6 +5,9 @@ using System.Text;
 
 namespace ALQ
 {
+    /// <summary>
+    /// https://www.hackerrank.com/challenges/minimum-swaps-2/problem
+    /// </summary>
     class MinimumSwaps
     {
         public int minimumSwaps(int[] arr)

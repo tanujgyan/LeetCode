@@ -13,15 +13,27 @@ namespace ALQ
             //ReorderDataInLogFilesDriverCode();
             //HeapSortDriverCode();
             //MinimumSwapsDriverCode();
-           // OnlineShoppingDriverCode();
+            // OnlineShoppingDriverCode();
             //RobotBoundedDriverCode();
-            CountSmallerElementsOnRightSideDriverCode();
+            //CountSmallerElementsOnRightSideDriverCode();
+            NumberOfProvincesDriverCode();
+        }
+
+        private static void NumberOfProvincesDriverCode()
+        {
+            NumberOfProvinces numberOfProvinces = new NumberOfProvinces();
+            int[][] arr = new int[4][];
+            arr[0] = new int[] { 1, 0, 0, 1 };
+            arr[1] = new int[] { 0, 1, 1, 0 };
+            arr[2] = new int[] { 0, 1, 1, 1 };
+            arr[3] = new int[] { 1, 0, 1, 1 };
+            numberOfProvinces.FindCircleNum(arr);
         }
 
         private static void CountSmallerElementsOnRightSideDriverCode()
         {
             CountSmallerElementsOnRightSide countSmallerElementsOnRightSide = new CountSmallerElementsOnRightSide();
-            countSmallerElementsOnRightSide.CountSmallerOnRight(new int[] { 2, 1,1 });
+            countSmallerElementsOnRightSide.CountSmallerOnRight(new int[] { 2, 1, 1 });
         }
 
         private static void RobotBoundedDriverCode()
@@ -51,7 +63,7 @@ namespace ALQ
         private static void ReorderDataInLogFilesDriverCode()
         {
             ReorderDataInLogFiles reorderDataInLogFiles = new ReorderDataInLogFiles();
-            reorderDataInLogFiles.ReorderLogFiles(new string[] {"6p tzwmh ige mc", "ns 566543603829", "ubd cujg j d yf", "ha6 1 938 376 5", "3yx 97 666 56 5", "d 84 34353 2249", "0 tllgmf qp znc", "s 1088746413789", "ys0 splqqxoflgx", "uhb rfrwt qzx r", "u lrvmdt ykmox", "ah4 4209164350", "rap 7729 8 125", "4 nivgc qo z i", "apx 814023338 8"});
+            reorderDataInLogFiles.ReorderLogFiles(new string[] { "6p tzwmh ige mc", "ns 566543603829", "ubd cujg j d yf", "ha6 1 938 376 5", "3yx 97 666 56 5", "d 84 34353 2249", "0 tllgmf qp znc", "s 1088746413789", "ys0 splqqxoflgx", "uhb rfrwt qzx r", "u lrvmdt ykmox", "ah4 4209164350", "rap 7729 8 125", "4 nivgc qo z i", "apx 814023338 8" });
         }
 
         private static void ItemsInContainerDriverCode()
@@ -63,7 +75,7 @@ namespace ALQ
         private static void CombinationSumDriverCode()
         {
             CombinationSum combinationSum = new CombinationSum();
-            combinationSum.CombinationSumMethod(new int[] { 2, 3,5}, 8);
+            combinationSum.CombinationSumMethod(new int[] { 2, 3, 5 }, 8);
         }
     }
 }
