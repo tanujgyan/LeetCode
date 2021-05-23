@@ -57,7 +57,6 @@ namespace ALQ
                 if (combinations.Sum()<=dollars)
                 {
                     totalWays++;
-                    
                 }
 
                 combinations = new List<int>();
