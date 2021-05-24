@@ -23,7 +23,52 @@ namespace ALQ
           //  _4SumDriverCode();
            // SmallestDivisorClassDriverCode();
            // GFG_getMinimumMovesDriverCode();
-            CandyClassDriverCode();
+            //CandyClassDriverCode();
+            //StringReductionDriverCode();
+            //RepeatedStringMatchDriverCode();
+            //TopKFrequentWordsDriverCode();
+           // ProductCategoriesClassDriverCode();
+            Divisibleby60PairsDriverCode();
+        }
+
+        private static void Divisibleby60PairsDriverCode()
+        {
+            Divisibleby60Pairs divisibleby60Pairs = new Divisibleby60Pairs();
+            divisibleby60Pairs.NumPairsDivisibleBy60(new int[] { 418, 204, 77, 278, 239, 457, 284, 263, 372, 279, 476, 416, 360, 18 });
+        }
+
+        private static void ProductCategoriesClassDriverCode()
+        {
+            ProductCategoriesClass productCategoriesClass = new ProductCategoriesClass();
+            int[][] products = new int[7][];
+            products[0] = new int[2] { 1, 2 };
+            products[1] = new int[2] { 2,5 };
+            products[2] = new int[2] { 3,4 };
+            products[3] = new int[2] { 4,6};
+            products[4] = new int[2] { 6,8 };
+            products[5] = new int[2] { 5,7 };
+            products[6] = new int[2] { 5,2 };
+
+
+            productCategoriesClass.CategorizeProducts(products);
+        }
+
+        private static void TopKFrequentWordsDriverCode()
+        {
+            TopKFrequentWords topKFrequentWords = new TopKFrequentWords();
+            topKFrequentWords.TopKFrequent(new string[] { "the", "day", "is", "sunny", "the", "the", "the", "sunny", "is", "is" }, 4);
+        }
+
+        private static void RepeatedStringMatchDriverCode()
+        {
+            RepeatedStringMatch repeatedStringMatch = new RepeatedStringMatch();
+            repeatedStringMatch.RepeatedStringMatchMethod("baa", "abaab");
+        }
+
+        private static void StringReductionDriverCode()
+        {
+            StringReduction stringReduction = new StringReduction();
+            stringReduction.stringReduction("cbabcaa");
         }
 
         private static void CandyClassDriverCode()
