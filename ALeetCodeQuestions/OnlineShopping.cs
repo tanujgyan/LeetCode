@@ -43,8 +43,8 @@ namespace ALQ
             List<int[]> list = new List<int[]>();
             list.Add(priceOfJeans);
             list.Add(priceOfTops);
-            list.Add(priceOfShoes);
             list.Add(priceOfSkirts);
+            list.Add(priceOfShoes);
             NumberOfWaysHelper(list, dollars, 0, new List<int>());
             return totalWays;
 

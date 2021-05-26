@@ -13,22 +13,93 @@ namespace ALQ
             //ReorderDataInLogFilesDriverCode();
             //HeapSortDriverCode();
             //MinimumSwapsDriverCode();
-            // OnlineShoppingDriverCode();
+            //OnlineShoppingDriverCode();
             //RobotBoundedDriverCode();
             //CountSmallerElementsOnRightSideDriverCode();
             //NumberOfProvincesDriverCode();
             //DetectCycleInDirectedGraphDriverCode();
             //TopologicalSortingDriverCode();
-         //   CourseSchedule2DriverCode();
-          //  _4SumDriverCode();
-           // SmallestDivisorClassDriverCode();
-           // GFG_getMinimumMovesDriverCode();
+            //   CourseSchedule2DriverCode();
+            //  _4SumDriverCode();
+            // SmallestDivisorClassDriverCode();
+            // GFG_getMinimumMovesDriverCode();
             //CandyClassDriverCode();
             //StringReductionDriverCode();
             //RepeatedStringMatchDriverCode();
             //TopKFrequentWordsDriverCode();
-           // ProductCategoriesClassDriverCode();
-            Divisibleby60PairsDriverCode();
+            // ProductCategoriesClassDriverCode();
+            //Divisibleby60PairsDriverCode();
+            // FindKClosestElementsDriverCode();
+            //BabyBlocksClassDriverCode();
+            //PrintAllCombinationsDriverCode();
+            //ShortestPathToFoodDriverCode();
+            //RottingOrangesDriverCode();
+            CampusBikesDriverCode();
+        }
+
+        private static void CampusBikesDriverCode()
+        {
+            CampusBikes campusBikes = new CampusBikes();
+            campusBikes.AssignBikes(
+                    new int[][] {
+                    new int[]{0,0},
+                    new int[]{1,1},
+                    new int[]{2,0}},
+                    new int[][] {
+                    new int[]{1,0},
+                    new int[]{2,2},
+                    new int[]{2,1}});
+            
+        }
+
+        private static void RottingOrangesDriverCode()
+        {
+            RottingOranges rottingOranges = new RottingOranges();
+            int[][] grid = new int[][]
+            {
+                new int[]{2,1,1},
+                new int[] {1,1,0},
+                new int[] {0,1,1}
+            };
+            rottingOranges.OrangesRotting(grid);
+        }
+
+        private static void ShortestPathToFoodDriverCode()
+        {
+            ShortestPathToFood shortestPathToFood = new ShortestPathToFood();
+            char[][] grid = new char[5][]
+            {
+                new char[]{'X','X','X','X','X','X','X','X'},
+                new char[]{'X','*','O','O','O','#','O','X'},
+                new char[]{'X','O','O','X','O','O','X','X'},
+                new char[]{'X','O','O','O','O','#','O','X'},
+                new char[]{'X','X','X','X','X','X','X','X'}
+            };
+            shortestPathToFood.ShortestPath(grid);
+        }
+
+        private static void PrintAllCombinationsDriverCode()
+        {
+            PrintAllCombinations printAllCombinations = new PrintAllCombinations();
+            printAllCombinations.combine(new int[] { 3, 4, 5, 6, 7 }, 3);
+        }
+
+        private static void BabyBlocksClassDriverCode()
+        {
+            BabyBlocksClass babyBlocks = new BabyBlocksClass();
+            char[][] pairs = new char[5][];
+            pairs[0] = new char[2] { 'a', 'b' };
+            pairs[1] = new char[2] { 'c', 'd' };
+            pairs[2] = new char[2] { 'e', 'f' };
+            pairs[3] = new char[2] { 'g', 'h' };
+            pairs[4] = new char[2] { 'x', 'y' };
+            babyBlocks.BabyBlocks(pairs, "abc");
+        }
+
+        private static void FindKClosestElementsDriverCode()
+        {
+            FindKClosestElements closestElements = new FindKClosestElements();
+            closestElements.FindClosestElements(new int[] { 3, 5, 8, 10 }, 2, 15);
         }
 
         private static void Divisibleby60PairsDriverCode()
@@ -42,12 +113,12 @@ namespace ALQ
             ProductCategoriesClass productCategoriesClass = new ProductCategoriesClass();
             int[][] products = new int[7][];
             products[0] = new int[2] { 1, 2 };
-            products[1] = new int[2] { 2,5 };
-            products[2] = new int[2] { 3,4 };
-            products[3] = new int[2] { 4,6};
-            products[4] = new int[2] { 6,8 };
-            products[5] = new int[2] { 5,7 };
-            products[6] = new int[2] { 5,2 };
+            products[1] = new int[2] { 2, 5 };
+            products[2] = new int[2] { 3, 4 };
+            products[3] = new int[2] { 4, 6 };
+            products[4] = new int[2] { 6, 8 };
+            products[5] = new int[2] { 5, 7 };
+            products[6] = new int[2] { 5, 2 };
 
 
             productCategoriesClass.CategorizeProducts(products);
@@ -74,7 +145,7 @@ namespace ALQ
         private static void CandyClassDriverCode()
         {
             CandyClass candyClass = new CandyClass();
-            candyClass.Candy(new int[] { 12,4,3,11,34,34,1,67});
+            candyClass.Candy(new int[] { 12, 4, 3, 11, 34, 34, 1, 67 });
             //candyClass.Candy(new int[] { 1, 3, 2, 2, 1 });
         }
 
@@ -89,7 +160,7 @@ namespace ALQ
         private static void SmallestDivisorClassDriverCode()
         {
             SmallestDivisorClass smallestDivisorClass = new SmallestDivisorClass();
-            smallestDivisorClass.SmallestDivisor(new int[] { 962551, 933661, 905225, 923035, 990560 },10);
+            smallestDivisorClass.SmallestDivisor(new int[] { 962551, 933661, 905225, 923035, 990560 }, 10);
         }
 
         private static void _4SumDriverCode()
@@ -107,13 +178,13 @@ namespace ALQ
             graph[2] = new int[2];
             graph[3] = new int[2];
             graph[0][0] = 1;
-            graph[0][ 1] = 0;
-            graph[1][ 0] = 2;
-            graph[1][ 1] = 0;
-            graph[2][ 0] = 3;
-            graph[2][ 1] = 1;
-            graph[3][ 0] = 3;
-            graph[3][ 1] = 2;
+            graph[0][1] = 0;
+            graph[1][0] = 2;
+            graph[1][1] = 0;
+            graph[2][0] = 3;
+            graph[2][1] = 1;
+            graph[3][0] = 3;
+            graph[3][1] = 2;
             courseSchedule2.FindOrder(4, graph);
         }
 
@@ -165,7 +236,7 @@ namespace ALQ
         private static void OnlineShoppingDriverCode()
         {
             OnlineShopping onlineShopping = new OnlineShopping();
-            onlineShopping.NumberOfWays(new int[] { 2, 3 }, new int[] { 4 }, new int[] { 2, 3 }, new int[] { 1, 2 }, 10);
+            onlineShopping.NumberOfWays(new int[] { 2, 3, 4 }, new int[] { 4, 5, 6 }, new int[] { 2, 3, 7 }, new int[] { 1, 2, 8 }, 10);
         }
 
         private static void MinimumSwapsDriverCode()
