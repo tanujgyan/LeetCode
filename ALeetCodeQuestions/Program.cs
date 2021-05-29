@@ -1,4 +1,5 @@
 ﻿using ALQ;
+using ALQ.GFG;
 using System;
 using System.Collections.Generic;
 
@@ -34,7 +35,104 @@ namespace ALQ
             //PrintAllCombinationsDriverCode();
             //ShortestPathToFoodDriverCode();
             //RottingOrangesDriverCode();
-            CampusBikesDriverCode();
+            //CampusBikesDriverCode();
+            // PrintAllPermutationsOfAStringWithDFSDriverCode();
+            // SellDiminishingValueColoredBallsDriverCode();
+            // CountNumberOfTeamsDriverCode();
+            //ShortestPathToGetAllKeysDriverCode();
+            //WordBreak2DriverCode();
+            // TopNCompetitorsDriverCode();
+            // FractionalKnapsackDriverCode();
+            //MaxUnitsOnATruckDriverCode();
+            MinesweeperDriverCode();
+
+            //double sum = 0;
+            //for (double i = 773160767; i >= (773160767 - 252264991); i--)
+            //{
+            //    sum = (sum+ i);
+            //}
+            //Console.WriteLine(sum% 1000000007);
+        }
+
+        private static void MinesweeperDriverCode()
+        {
+            Minesweeper minesweeper = new Minesweeper();
+            minesweeper.UpdateBoard(new char[][]
+            {
+                new char[]{'E', 'E', 'E', 'E', 'E', },
+                new char[]{'E', 'E', 'M', 'E', 'E', },
+                new char[]{'E', 'E', 'E', 'E', 'E', },
+                new char[]{'E', 'E', 'M', 'E', 'E', }
+            }, new int[] { 3, 0 });
+        }
+
+        private static void MaxUnitsOnATruckDriverCode()
+        {
+            MaxUnitsOnATruck maxUnitsOnATruck = new MaxUnitsOnATruck();
+            maxUnitsOnATruck.MaximumUnits(new int[4][]
+            {
+                new int[]{5,10},
+                new int[]{2,5},
+                new int[]{4,7},
+                new int[]{3,9}
+            }, 10);
+            
+        }
+
+        private static void FractionalKnapsackDriverCode()
+        {
+            FractionalKnapsack fractionalKnapsack = new FractionalKnapsack();
+            item[] arr = { new item(60, 10),
+                   new item(100, 20),
+                   new item(120, 30) };
+            fractionalKnapsack.FracKnapSack(arr, 50);
+        }
+
+        private static void TopNCompetitorsDriverCode()
+        {
+            TopNCompetitors topNCompetitors = new TopNCompetitors();
+            topNCompetitors.TopNumCompetitors(6, 20, new List<string>() { "newshop", "shopnow", "afashion", "fashionbeats", "mymarket", "tcellular" },6, 
+                new List<string>()
+                {
+                    "newshop is providing good services in the city; everyone should use newshop",
+                    "best services by newshop",
+                    "fashionbeats has great services in the city",
+                    "I am proud to have fashionbeats",
+                    "mymarket has awesome services",
+                    "Thanks Newshop for the quick delivery"
+                });
+        }
+
+        private static void WordBreak2DriverCode()
+        {
+            WordBreak2 wordBreak2 = new WordBreak2();
+            wordBreak2.WordBreak("aaaaaaa", new string[] { "aaaa", "aa", "a" });
+        }
+
+        private static void ShortestPathToGetAllKeysDriverCode()
+        {
+            ShortestPathToGetAllKeys shortestPathToGetAllKeys = new ShortestPathToGetAllKeys();
+            shortestPathToGetAllKeys.ShortestPathAllKeys(new string[] { "@..aA", "..B#.", "....b" });
+        }
+
+        private static void CountNumberOfTeamsDriverCode()
+        {
+            CountNumberOfTeams countNumberOfTeams = new CountNumberOfTeams();
+            countNumberOfTeams.NumTeams(new int[] { 1, 2, 3, 4, 5, 6 });
+        }
+
+        private static void SellDiminishingValueColoredBallsDriverCode()
+        {
+            SellDiminishingValueColoredBalls sellDiminishingValueColoredBalls = new SellDiminishingValueColoredBalls();
+            sellDiminishingValueColoredBalls.MaxProfit(new int[] { 497978859, 167261111, 483575207, 591815159 }, 836556809);
+            // SellDiminishingColorValueBallsJava sellDiminishingColorValueBallsJava = new SellDiminishingColorValueBallsJava();
+            //sellDiminishingColorValueBallsJava.maxProfit(new int[] { 497978859, 167261111, 483575207, 591815159 }, 836556809);
+        }
+
+        private static void PrintAllPermutationsOfAStringWithDFSDriverCode()
+        {
+            PrintAllPermutationsOfAStringWithDFS printAllPermutationsOfAStringWithDFS = new PrintAllPermutationsOfAStringWithDFS();
+            printAllPermutationsOfAStringWithDFS.PrintAllPermutationsOfAStringWithDFSMethod("abc");
         }
 
         private static void CampusBikesDriverCode()
@@ -49,7 +147,7 @@ namespace ALQ
                     new int[]{1,0},
                     new int[]{2,2},
                     new int[]{2,1}});
-            
+
         }
 
         private static void RottingOrangesDriverCode()
