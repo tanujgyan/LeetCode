@@ -44,14 +44,88 @@ namespace ALQ
             // TopNCompetitorsDriverCode();
             // FractionalKnapsackDriverCode();
             //MaxUnitsOnATruckDriverCode();
-            MinesweeperDriverCode();
-
+            //MinesweeperDriverCode();
+            // Search2DMatrix2DriverCode();
+            //KnightOnAChessBoardDriverCode();
+            //LargestItemAssociationDriverCode();
+            //FreshPromotionDriverCode();
+            //FavoriteGeneresDriverCode();
+            //OptimizingBoxWeightDriverCode();
             //double sum = 0;
             //for (double i = 773160767; i >= (773160767 - 252264991); i--)
             //{
             //    sum = (sum+ i);
             //}
             //Console.WriteLine(sum% 1000000007);
+        }
+
+        private static void OptimizingBoxWeightDriverCode()
+        {
+            
+        }
+
+        private static void FavoriteGeneresDriverCode()
+        {
+            FavoriteGeneres favoriteGeneres = new FavoriteGeneres();
+            Dictionary<string, List<string>> userSongs = new Dictionary<string, List<string>>();
+            userSongs.Add("David", new List<string>() { "song1", "song2", "song3", "song4", "song8" });
+            userSongs.Add("Emma", new List<string>() { "song5", "song6", "song7" });
+            Dictionary<string, List<string>> songGenres = new Dictionary<string, List<string>>();
+            songGenres.Add("Rock", new List<string>() { "song1", "song3" });
+            songGenres.Add("Dubstep", new List<string>() { "song7" });
+            songGenres.Add("Techno", new List<string>() { "song2", "song4" });
+            songGenres.Add("Pop", new List<string>() { "song5", "song6" });
+            songGenres.Add("Jazz", new List<string>() { "song8", "song9" });
+            favoriteGeneres.FavGenere(userSongs, songGenres);
+        }
+
+        private static void FreshPromotionDriverCode()
+        {
+            FreshPromotion freshPromotion = new FreshPromotion();
+            freshPromotion.FreshPromotionMethod(new string[][]
+            {
+                new string[]{ "apple", "apple", "banana" }
+                //new string[]{ "banana", "anything", "banana" }
+            }, new string[] { "apple", "apple", "apple", "banana"});
+        }
+
+        private static void LargestItemAssociationDriverCode()
+        {
+            LargestItemAssociation largestItemAssociation = new LargestItemAssociation();
+
+            largestItemAssociation.LargestItemAssociationMethod(new List<Tuple<string, string>>()
+            {
+                new Tuple<string, string>("Item2","Item1"),
+                 new Tuple<string, string>("Item2","Item8"),
+                 new Tuple<string, string>("Item2","Item10"),
+                new Tuple<string, string>("Item10","Item12"),
+                new Tuple<string, string>("Item10","Item4"),
+                 new Tuple<string, string>("Item10","Item3"),
+                 new Tuple<string, string>("Item3","Item4"),
+                 new Tuple<string, string>("Item4","Item5"),
+            });
+
+
+
+        }
+
+        private static void KnightOnAChessBoardDriverCode()
+        {
+            KnightOnAChessBoard knightOnAChess = new KnightOnAChessBoard();
+            knightOnAChess.ValidSquares(3, 0, 0);
+        }
+
+        private static void Search2DMatrix2DriverCode()
+        {
+            Search2DMatrix2 search2DMatrix2 = new Search2DMatrix2();
+            search2DMatrix2.SearchMatrix(new int[][]
+            {
+                new int[]{ 1, 4, 7, 11, 15 },
+                new int[]{2,5,8,12,19 },
+                new int[]{ 3,6,9,16,22},
+                new int[]{10,13,14,17,24 },
+                new int[]{18,21,23,26,30 },
+            }, 20);
         }
 
         private static void MinesweeperDriverCode()
@@ -76,7 +150,7 @@ namespace ALQ
                 new int[]{4,7},
                 new int[]{3,9}
             }, 10);
-            
+
         }
 
         private static void FractionalKnapsackDriverCode()
@@ -91,7 +165,7 @@ namespace ALQ
         private static void TopNCompetitorsDriverCode()
         {
             TopNCompetitors topNCompetitors = new TopNCompetitors();
-            topNCompetitors.TopNumCompetitors(6, 20, new List<string>() { "newshop", "shopnow", "afashion", "fashionbeats", "mymarket", "tcellular" },6, 
+            topNCompetitors.TopNumCompetitors(6, 20, new List<string>() { "newshop", "shopnow", "afashion", "fashionbeats", "mymarket", "tcellular" }, 6,
                 new List<string>()
                 {
                     "newshop is providing good services in the city; everyone should use newshop",
