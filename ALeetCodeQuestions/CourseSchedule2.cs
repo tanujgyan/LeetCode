@@ -13,6 +13,15 @@ namespace ALQ
         bool cycleDetected = false;
         public int[] FindOrder(int numCourses, int[][] prerequisites)
         {
+            if(prerequisites.Length==0)
+            {
+                var ret = new int[numCourses];
+                for(int i=0;i<numCourses;i++)
+                {
+                    ret[i] = i;
+                }
+                return ret;
+            }
             BuildAdjacencyList(prerequisites);
             //initially mark all nodes as White
             InitializeColorCoding(numCourses);
@@ -24,7 +33,14 @@ namespace ALQ
                     FindOrderHelper(element.Key);
                 }
             }
-            if(!cycleDetected)
+            for (int i = 0; i < numCourses; i++)
+            {
+                if (colorCoding[i] == 'W')
+                {
+                    FindOrderHelper(i);
+                }
+            }
+            if (!cycleDetected)
             {
                 return topologicallySortedCourses.ToArray();
             }
