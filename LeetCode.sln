@@ -15,6 +15,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Binary Tree", "Binary Tree\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALQ", "ALeetCodeQuestions\ALQ.csproj", "{1C27A295-F8C3-47A7-BD52-CC04068A14A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMDemo", "AMDemo\AMDemo.csproj", "{D5D06054-B325-4580-A58E-EA941D3CAB37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMActual", "AMActual\AMActual.csproj", "{942FFDB0-241D-4FDC-B375-0B5F7FBB432E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{1C27A295-F8C3-47A7-BD52-CC04068A14A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C27A295-F8C3-47A7-BD52-CC04068A14A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C27A295-F8C3-47A7-BD52-CC04068A14A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5D06054-B325-4580-A58E-EA941D3CAB37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5D06054-B325-4580-A58E-EA941D3CAB37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5D06054-B325-4580-A58E-EA941D3CAB37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5D06054-B325-4580-A58E-EA941D3CAB37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{942FFDB0-241D-4FDC-B375-0B5F7FBB432E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{942FFDB0-241D-4FDC-B375-0B5F7FBB432E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{942FFDB0-241D-4FDC-B375-0B5F7FBB432E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{942FFDB0-241D-4FDC-B375-0B5F7FBB432E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

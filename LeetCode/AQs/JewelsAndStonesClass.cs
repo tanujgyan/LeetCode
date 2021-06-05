@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+/// <summary>
+/// https://leetcode.com/problems/jewels-and-stones/
+/// </summary>
 namespace LeetCode.Amazon_Interview_Questions
 {
     class JewelsAndStonesClass

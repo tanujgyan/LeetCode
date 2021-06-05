@@ -7,80 +7,50 @@ namespace LeetCode.Amazon_Interview_Questions
 {
     class CoinChangeClass
     {
-        /// <summary>
-        /// Sabse pehle sort the array
-        /// find the largest number in array joki target se bada hai
-        /// us number se divide kro currency ko and uska remainder agar 0 nahi hai to usko le lo
-        /// remainder ko next largest number s divide krke same process follow kro
-        /// 
-        /// 
-        ///
-        /// </summary>
-        /// <param name="coins"></param>
-        /// <param name="amount"></param>
-        /// <returns></returns>
-        //public int CoinChange(int[] coins, int amount)
-        //{
-        //    //make sure amount is valid and can be processed
-        //    if (amount == 0)
-        //    {
-        //        return 0;
-        //    }
-        //    Array.Sort(coins);
-        //    var list = coins.ToList();
-        //    for (int i = list.Count - 1; i >= 0; i--)
-        //    {
-        //        var ret = CoinChangeHelper(list.ToArray(), amount);
-        //        if (ret != -1)
-        //        {
-        //            return ret;
-        //        }
-        //        else
-        //        {
-        //            list.RemoveAt(i);
-        //        }
-        //    }
-        //    return -1;
+        public int MaximumNumberOfWaysToMakeTheAmount(int[] coins, int amount)
+        {
+            int[][] dpMatrix = new int[coins.Length + 1][];
+            //Initialize DP Matrix
+            for (int i = 0; i < dpMatrix.Length; i++)
+            {
+                dpMatrix[i] = new int[amount + 1];
+                for (int j = 0; j < dpMatrix[0].Length; j++)
+                {
+                    if (i == 0)
+                    {
+                        dpMatrix[i][j] = 0;
+                    }
+                    else if (j == 0)
+                    {
+                        dpMatrix[i][j] = 1;
+                    }
+                }
+            }
 
-        //}
-        //public int CoinChangeHelper(int[] coins, int amount)
-        //{
+            //Fill the DP Matrix
+            for(int i=1;i<dpMatrix.Length;i++)
+            {
+                for(int j=1;j<dpMatrix[0].Length;j++)
+                {
+                    //this indicates that how many ways are there to solve the problem using coins excluding the one in consideration+
+                    //if we include this coin then the amount which is left (denoted by column) how many ways to achieve that amount
+                    if(coins[i-1]<=j)
+                    {
+                        dpMatrix[i][j] = dpMatrix[i - 1][j] + dpMatrix[i][j - coins[i - 1]];
+                    }
+                    //if it is not possible to use the coin just take the number of ways to solve it excluding this coin
+                    else
+                    {
+                        dpMatrix[i][j] = dpMatrix[i - 1][j];
+                    }
+                }
+            }
+            return dpMatrix[coins.Length][amount];
 
-        //    int coinCount = 0;
-        //    int tempAmount = amount;
-        //    for (int i = coins.Length - 1; i >= 0; i--)
-        //    {
-        //        if (coins[i] <= tempAmount)
-        //        {
-        //            int baseValue = coins[i];
-        //            while (tempAmount != 0)
-        //            {
-        //                //coinCount += tempAmount / baseValue;
-        //                coinCount++;
-        //                tempAmount -= baseValue;
+        }
 
-        //                if (tempAmount >= baseValue)
-        //                {
-        //                    continue;
-        //                }
-        //                else if (tempAmount < baseValue)
-        //                {
-        //                    break;
-        //                }
-        //            }
-        //            if (tempAmount == 0)
-        //            {
-        //                return coinCount;
-        //            }
-        //        }
-        //    }
-        //    return -1;
-        //}
-        Stack<int> s = new Stack<int>();
-        //public List<int> CoinChange(int[] coins, int amount)
-        //{
-           
-        //}
+
+
 
     }
 }

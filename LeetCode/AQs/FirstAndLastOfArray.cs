@@ -2,9 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+/// <summary>
+/// https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+/// </summary>
 namespace LeetCode.Amazon_Interview_Questions
 {
+    /// <summary>
+    /// The idea of this algorithm was to use binary search and locate the number once.
+    /// Once we have one location of target we do a linear search on both sides to get first and last occurence
+    /// </summary>
     class FirstAndLastOfArray
     {
         SortedSet<int> res = new SortedSet<int>();

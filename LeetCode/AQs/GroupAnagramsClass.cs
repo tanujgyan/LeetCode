@@ -2,9 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+/// <summary>
+/// https://leetcode.com/problems/group-anagrams/
+/// </summary>
 namespace LeetCode.Amazon_Interview_Questions
 {
+    /// <summary>
+    /// The idea behind this algorithm is to sort and check if the sorted string exists as key already, if yes
+    /// then add it as value otherwise add a new key
+    /// </summary>
     class GroupAnagramsClass
     {
         public IList<IList<string>> GroupAnagrams(string[] strs)
