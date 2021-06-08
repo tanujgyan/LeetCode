@@ -1,5 +1,7 @@
 ﻿using ALQ;
+using ALQ.Amazon_Tagged;
 using ALQ.GFG;
+using Binary_Tree;
 using System;
 using System.Collections.Generic;
 
@@ -55,8 +57,42 @@ namespace ALQ
             //OptimalUtilizationDriverCode();
             //MinimumDivisonsToReachThresholdDriverCode();
             //DynamicSchedulingDriverCode();
-            MyAtoiClassDriverCode();
+            //MyAtoiClassDriverCode();
+            //LowestCommonAncestorDriverCode();
+            DistanceBWTwoNodesOfBTDriverCode();
 
+        }
+
+        private static void DistanceBWTwoNodesOfBTDriverCode()
+        {
+            TreeNode root = new TreeNode();
+            root.val = 3;
+            root.left = new TreeNode(5);
+            root.right = new TreeNode(1);
+            root.left.left = new TreeNode(6);
+            root.left.right = new TreeNode(2);
+            root.left.right.left = new TreeNode(7);
+            root.left.right.right = new TreeNode(4);
+            root.right.left = new TreeNode(0);
+            root.right.right = new TreeNode(8);
+            DistanceBWTwoNodesOfBT distanceBWTwoNodesOfBT = new DistanceBWTwoNodesOfBT();
+            distanceBWTwoNodesOfBT.findDistance(root, 1, 8);
+        }
+
+        private static void LowestCommonAncestorDriverCode()
+        {
+            LowestCommonAncestor lowestCommonAncestor = new LowestCommonAncestor();
+            TreeNode root = new TreeNode();
+            root.val = 3;
+            root.left = new TreeNode(5);
+            root.right = new TreeNode(1);
+            root.left.left = new TreeNode(6);
+            root.left.right = new TreeNode(2);
+            root.left.right.left = new TreeNode(7);
+            root.left.right.right = new TreeNode(4);
+            root.right.left = new TreeNode(0);
+            root.right.right = new TreeNode(8);
+            var t= lowestCommonAncestor.FindLCA(root, 2, 4);
         }
 
         private static void MyAtoiClassDriverCode()
