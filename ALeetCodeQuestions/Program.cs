@@ -59,8 +59,25 @@ namespace ALQ
             //DynamicSchedulingDriverCode();
             //MyAtoiClassDriverCode();
             //LowestCommonAncestorDriverCode();
-            DistanceBWTwoNodesOfBTDriverCode();
+            //DistanceBWTwoNodesOfBTDriverCode();
+            PolynomialAsLinkedListAdditionDriverCode();
 
+        }
+
+        private static void PolynomialAsLinkedListAdditionDriverCode()
+        {
+            PolynomialAsLinkedListAddition polynomialAsLinkedListAddition = new PolynomialAsLinkedListAddition();
+            PolyNode p1 = new PolyNode();
+            p1.Coefficient = 1;
+            p1.Power = 2;
+            p1.Next = new PolyNode(4, 1);
+            p1.Next.Next = new PolyNode(3, 0);
+            PolyNode p2 = new PolyNode();
+            p2.Coefficient = -1;
+            p2.Power = 2;
+            p2.Next = new PolyNode(-4, 1);
+            p2.Next.Next = new PolyNode(-1, 0);
+            polynomialAsLinkedListAddition.AddTwoPolyNodes(p1, p2);
         }
 
         private static void DistanceBWTwoNodesOfBTDriverCode()
