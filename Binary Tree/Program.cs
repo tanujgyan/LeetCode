@@ -10,7 +10,109 @@ namespace Binary_Tree
             // InOrderPreOrderToPostOrderDriverCode();
             //SortedArraytoBSTClassDriverCode();
             //SortedLLToBSTDriverCode();
-            DistributeCoinsInBTDriverCode();
+            //DistributeCoinsInBTDriverCode();
+            // PrintAllPathsOfATreeDriverCode();
+            // RecoverBSTDriverCode();
+            //MaximumDepthOfBTDriverCode();
+            //BalancedBTDriverCode();
+            //PathSumDriverCode();
+           // MinDepthClassDriverCode();
+            //PopulateNextRightPointersDriverCode();
+            RightSideViewOfBTDriverCode();
+        }
+
+        private static void RightSideViewOfBTDriverCode()
+        {
+            RightSideViewOfBT rightSideViewOf = new RightSideViewOfBT();
+            TreeNode root = new TreeNode(1);
+           
+            root.right = new TreeNode(3);
+            root.right.right = new TreeNode(5);
+            root.right.right.left = new TreeNode(6);
+            root.right.right.right = new TreeNode(7);
+            rightSideViewOf.RightSideView(root);
+        }
+
+        private static void PopulateNextRightPointersDriverCode()
+        {
+            PopulateNextRightPointers populateNextRightPointers = new PopulateNextRightPointers();
+            Node node = new Node(1);
+            node.left = new Node(2);
+            node.right = new Node(3);
+            node.left.left = new Node(4);
+            node.left.right = new Node(5);
+            node.right.left = new Node(6);
+            node.right.right = new Node(7);
+            populateNextRightPointers.Connect(node);
+        }
+
+        private static void MinDepthClassDriverCode()
+        {
+            TreeNode root = new TreeNode(3);
+            root.left = new TreeNode(9);
+            root.right = new TreeNode(20);
+            root.right.left = new TreeNode(15);
+            root.right.right = new TreeNode(7);
+            
+            MinDepthClass minDepthClass = new MinDepthClass();
+            minDepthClass.MinDepth(root);
+        }
+
+        private static void PathSumDriverCode()
+        {
+            PathSum pathSum = new PathSum();
+            TreeNode root = new TreeNode(1);
+            root.left = new TreeNode(2);
+            pathSum.HasPathSum(root, 1);
+        }
+
+        private static void BalancedBTDriverCode()
+        {
+            BalancedBT balancedBT = new BalancedBT();
+            TreeNode root = new TreeNode(1);
+           // root.left = new TreeNode(2);
+            root.right = new TreeNode(3);
+           
+            //root.left.right = new TreeNode(4);
+            //root.left.right.left = new TreeNode(7);
+            root.right.left = new TreeNode(5);
+            root.right.right = new TreeNode(6);
+            balancedBT.IsBalanced(root);
+        }
+
+        private static void MaximumDepthOfBTDriverCode()
+        {
+            MaximumDepthOfBT maximumDepthOfBT = new MaximumDepthOfBT();
+            TreeNode root = new TreeNode(1);
+            root.left = new TreeNode(2);
+            root.right = new TreeNode(3);
+            root.left.left = new TreeNode(4);
+            root.right.right = new TreeNode(5);
+            maximumDepthOfBT.MaxDepth(root);
+        }
+
+        private static void RecoverBSTDriverCode()
+        {
+            RecoverBST recoverBST = new RecoverBST();
+            TreeNode root = new TreeNode(2);
+            root.left = new TreeNode(3);
+            root.right = new TreeNode(1);
+            //root.right.left = new TreeNode(2);
+            recoverBST.RecoverTree(root);
+        }
+
+        private static void PrintAllPathsOfATreeDriverCode()
+        {
+            PrintAllPathsOfATree printAllPathsOfATree = new PrintAllPathsOfATree();
+            TreeNode root = new TreeNode(1);
+            root.left = new TreeNode(2);
+            root.right = new TreeNode(3);
+            root.left.right = new TreeNode(4);
+            root.left.left = new TreeNode(5);
+            root.left.left.left = new TreeNode(7);
+            root.left.left.right = new TreeNode(8);
+            root.left.right.left = new TreeNode(6);
+            printAllPathsOfATree.PrintPaths(root);
         }
 
         private static void DistributeCoinsInBTDriverCode()

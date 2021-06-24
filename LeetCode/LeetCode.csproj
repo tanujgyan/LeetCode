@@ -6,6 +6,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Amazon Interview Questions\**" />
+    <Compile Remove="Microsoft Interview Questions\**" />
+    <EmbeddedResource Remove="Amazon Interview Questions\**" />
+    <EmbeddedResource Remove="Microsoft Interview Questions\**" />
+    <None Remove="Amazon Interview Questions\**" />
+    <None Remove="Microsoft Interview Questions\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\HeapImplementation\HeapImplementation.csproj" />
   </ItemGroup>
 

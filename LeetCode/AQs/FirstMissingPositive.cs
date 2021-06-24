@@ -10,6 +10,14 @@ namespace LeetCode.Amazon_Interview_Questions
     /// </summary>
     class FirstMissingPositiveClass
     {
+        /// <summary>
+        /// The idea of algorithm is to use a dictionary to keep track of positive integers we see
+        /// Take a dict and initialize it with positive integers starting from 1 till lenght of array
+        /// Parse the array from left to right and every positive integer found in array is marked as true in dict
+        /// Once array parsing is done filter the dict to find the first element with false value
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
         public int FirstMissingPositive(int[] nums)
         {
             Dictionary<int, bool> dict = new Dictionary<int, bool>();

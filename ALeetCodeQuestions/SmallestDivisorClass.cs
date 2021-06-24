@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+/// <summary>
+/// https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/
+/// </summary>
 namespace ALQ
 {
     class SmallestDivisorClass

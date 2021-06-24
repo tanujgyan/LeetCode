@@ -1,9 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+/// <summary>
+/// https://leetcode.com/problems/copy-list-with-random-pointer/
+/// </summary>
 namespace LeetCode.Amazon_Interview_Questions
 {
+    /// <summary>
+    /// The idea behind this algorithm is to first create a deep copy list with all the nodes. DONT try and copy random pointers at this time
+    /// While creating the list create a dictionary and store the head as key and tempHead as value
+    /// When we are done creating the list we will iterate over head again and this time we will see if the head has a random pointer
+    /// we will go into dictionary and take the random pointer value from the dictionary which will be nothing but the corrosponding copy head node
+    /// </summary>
     class CopyListWithRandomPointer
     {
         Dictionary<Node, Node> randomCache = new Dictionary<Node, Node>();

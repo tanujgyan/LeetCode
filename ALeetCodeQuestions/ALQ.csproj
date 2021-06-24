@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Binary Tree\Binary Tree.csproj" />
     <ProjectReference Include="..\HeapImplementation\HeapImplementation.csproj" />
   </ItemGroup>
 

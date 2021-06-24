@@ -120,7 +120,7 @@ namespace LeetCode
             //FirstAndLastOfArrayDriverCode();
             //KPermutationDriverCode();
             //PrintAllPermutationsDriverCode();
-            //GenerateParanthesisDriverCode();
+            GenerateParanthesisDriverCode();
             //HeapOperationsDriverCode();
             //PrintCombinationsDFSDriverCode();
             //SearchRotatedArrayDriverCode();
@@ -136,7 +136,7 @@ namespace LeetCode
             //RotateStringClassDriverCode();
             //LinkedListCycleDriverCode();
             //RotateArrayDriverCode();
-            MaximalSubsquareDriverCode();
+            //MaximalSubsquareDriverCode();
         }
 
         private static void MaximalSubsquareDriverCode()
@@ -335,7 +335,7 @@ namespace LeetCode
         private static void GenerateParanthesisDriverCode()
         {
             GenerateParanthesis generateParanthesis = new GenerateParanthesis();
-            generateParanthesis.GenerateParenthesis(8);
+            generateParanthesis.GenerateParenthesis(3);
         }
 
         private static void PrintAllPermutationsDriverCode()
@@ -834,9 +834,8 @@ namespace LeetCode
         private static void CoinChangeClassDriverCode()
         {
             CoinChangeClass coinChangeClass = new CoinChangeClass();
-            //coinChangeClass.CoinChange(new int[] { 186,419,83,408}, 6249);
-            //var r= coinChangeClass.CoinChange(new int[] { 2,5}, 11);
-            //Console.WriteLine(r);
+            //coinChangeClass.CoinChange(new int[] { 1, 2, 3 }, 5);
+            coinChangeClass.MinimumNumberOfCoins(new int[] { 1, 2, 3 }, 5);
 
         }
 

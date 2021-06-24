@@ -1,5 +1,7 @@
 ﻿using ALQ;
+using ALQ.Amazon_Tagged;
 using ALQ.GFG;
+using Binary_Tree;
 using System;
 using System.Collections.Generic;
 
@@ -20,7 +22,7 @@ namespace ALQ
             //NumberOfProvincesDriverCode();
             //DetectCycleInDirectedGraphDriverCode();
             //TopologicalSortingDriverCode();
-            //   CourseSchedule2DriverCode();
+               //CourseSchedule2DriverCode();
             //  _4SumDriverCode();
             // SmallestDivisorClassDriverCode();
             // GFG_getMinimumMovesDriverCode();
@@ -51,17 +53,113 @@ namespace ALQ
             //FreshPromotionDriverCode();
             //FavoriteGeneresDriverCode();
             //OptimizingBoxWeightDriverCode();
-            //double sum = 0;
-            //for (double i = 773160767; i >= (773160767 - 252264991); i--)
-            //{
-            //    sum = (sum+ i);
-            //}
-            //Console.WriteLine(sum% 1000000007);
+            //TransactionLogsDriverCode();
+            //OptimalUtilizationDriverCode();
+            //MinimumDivisonsToReachThresholdDriverCode();
+            //DynamicSchedulingDriverCode();
+            //MyAtoiClassDriverCode();
+            //LowestCommonAncestorDriverCode();
+            //DistanceBWTwoNodesOfBTDriverCode();
+            PolynomialAsLinkedListAdditionDriverCode();
+
+        }
+
+        private static void PolynomialAsLinkedListAdditionDriverCode()
+        {
+            PolynomialAsLinkedListAddition polynomialAsLinkedListAddition = new PolynomialAsLinkedListAddition();
+            PolyNode p1 = new PolyNode();
+            p1.Coefficient = 1;
+            p1.Power = 2;
+            p1.Next = new PolyNode(4, 1);
+            p1.Next.Next = new PolyNode(3, 0);
+            PolyNode p2 = new PolyNode();
+            p2.Coefficient = -1;
+            p2.Power = 2;
+            p2.Next = new PolyNode(-4, 1);
+            p2.Next.Next = new PolyNode(-1, 0);
+            polynomialAsLinkedListAddition.AddTwoPolyNodes(p1, p2);
+        }
+
+        private static void DistanceBWTwoNodesOfBTDriverCode()
+        {
+            TreeNode root = new TreeNode();
+            root.val = 3;
+            root.left = new TreeNode(5);
+            root.right = new TreeNode(1);
+            root.left.left = new TreeNode(6);
+            root.left.right = new TreeNode(2);
+            root.left.right.left = new TreeNode(7);
+            root.left.right.right = new TreeNode(4);
+            root.right.left = new TreeNode(0);
+            root.right.right = new TreeNode(8);
+            DistanceBWTwoNodesOfBT distanceBWTwoNodesOfBT = new DistanceBWTwoNodesOfBT();
+            distanceBWTwoNodesOfBT.findDistance(root, 1, 8);
+        }
+
+        private static void LowestCommonAncestorDriverCode()
+        {
+            LowestCommonAncestor lowestCommonAncestor = new LowestCommonAncestor();
+            TreeNode root = new TreeNode();
+            root.val = 3;
+            root.left = new TreeNode(5);
+            root.right = new TreeNode(1);
+            root.left.left = new TreeNode(6);
+            root.left.right = new TreeNode(2);
+            root.left.right.left = new TreeNode(7);
+            root.left.right.right = new TreeNode(4);
+            root.right.left = new TreeNode(0);
+            root.right.right = new TreeNode(8);
+            var t= lowestCommonAncestor.FindLCA(root, 2, 4);
+        }
+
+        private static void MyAtoiClassDriverCode()
+        {
+            MyAtoiClass myAtoiClass = new MyAtoiClass();
+            myAtoiClass.MyAtoi("43");
+        }
+
+        private static void DynamicSchedulingDriverCode()
+        {
+            DynamicScheduling dynamicScheduling = new DynamicScheduling();
+            dynamicScheduling.DynamicSchedule(new int[] { 5, 2, 4, 1, 6, 2, 7 }, 3);
+        }
+
+        private static void MinimumDivisonsToReachThresholdDriverCode()
+        {
+            MinimumDivisonsToReachThreshold minimumDivisonsToReachThreshold = new MinimumDivisonsToReachThreshold();
+            minimumDivisonsToReachThreshold.MinimumDivisonsToReachThresholdMethod(new int[] { 4,5,6 }, 3, 10);
+        }
+
+        private static void OptimalUtilizationDriverCode()
+        {
+            OptimalUtilization optimalUtilization = new OptimalUtilization();
+            optimalUtilization.OptimalUtilizationMethod(
+                new List<List<int>>()
+                {
+                    new List<int>(){1,7}, 
+                    new List<int>(){2,8},
+                    new List<int>(){3,14}
+                }, 
+                new List<List<int>>()
+                {
+                    new List<int>(){1,5},
+                    new List<int>(){2,10},
+                    new List<int>(){3,14}
+                }, 11);
+        }
+
+        private static void TransactionLogsDriverCode()
+        {
+            TransactionLogs transactionLogs = new TransactionLogs();
+            transactionLogs.TransactionLogsMethod(new List<string>()
+            {
+            "345366 89921 45", "029323 38239 23", "38239 345366 15", "029323 38239 77", "345366 38239 23", "029323 345366 13","38239 38239 23"
+            }, 3);
         }
 
         private static void OptimizingBoxWeightDriverCode()
         {
-            
+
         }
 
         private static void FavoriteGeneresDriverCode()
@@ -86,7 +184,7 @@ namespace ALQ
             {
                 new string[]{ "apple", "apple", "banana" }
                 //new string[]{ "banana", "anything", "banana" }
-            }, new string[] { "apple", "apple", "apple", "banana"});
+            }, new string[] { "apple", "apple", "apple", "banana" });
         }
 
         private static void LargestItemAssociationDriverCode()
@@ -344,20 +442,20 @@ namespace ALQ
         private static void CourseSchedule2DriverCode()
         {
             CourseSchedule2 courseSchedule2 = new CourseSchedule2();
-            int[][] graph = new int[4][];
+            int[][] graph = new int[1][];
             graph[0] = new int[2];
-            graph[1] = new int[2];
-            graph[2] = new int[2];
-            graph[3] = new int[2];
+            //graph[1] = new int[2];
+            //graph[2] = new int[2];
+            //graph[3] = new int[2];
             graph[0][0] = 1;
             graph[0][1] = 0;
-            graph[1][0] = 2;
-            graph[1][1] = 0;
-            graph[2][0] = 3;
-            graph[2][1] = 1;
-            graph[3][0] = 3;
-            graph[3][1] = 2;
-            courseSchedule2.FindOrder(4, graph);
+            //graph[1][0] = 2;
+            //graph[1][1] = 0;
+            //graph[2][0] = 3;
+            //graph[2][1] = 1;
+            //graph[3][0] = 3;
+            //graph[3][1] = 2;
+            courseSchedule2.FindOrder(3, graph);
         }
 
         private static void TopologicalSortingDriverCode()

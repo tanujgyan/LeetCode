@@ -10,6 +10,13 @@ namespace LeetCode.Amazon_Interview_Questions
     /// </summary>
     class FirstUniqueCharacterInString
     {
+        /// <summary>
+        /// The idea is to use a dictionary to keep track of characters seen so far, if a character is repeated
+        /// mark it as -99 otherwise put the value as index 
+        /// Find the first value with index!=-99
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
         public int FirstUniqChar(string s)
         {
             Dictionary<char, int> dict = new Dictionary<char, int>();
