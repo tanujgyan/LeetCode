@@ -11,10 +11,59 @@ namespace Binary_Tree
             //SortedArraytoBSTClassDriverCode();
             //SortedLLToBSTDriverCode();
             //DistributeCoinsInBTDriverCode();
-           // PrintAllPathsOfATreeDriverCode();
-           // RecoverBSTDriverCode();
+            // PrintAllPathsOfATreeDriverCode();
+            // RecoverBSTDriverCode();
             //MaximumDepthOfBTDriverCode();
-            BalancedBTDriverCode();
+            //BalancedBTDriverCode();
+            //PathSumDriverCode();
+           // MinDepthClassDriverCode();
+            //PopulateNextRightPointersDriverCode();
+            RightSideViewOfBTDriverCode();
+        }
+
+        private static void RightSideViewOfBTDriverCode()
+        {
+            RightSideViewOfBT rightSideViewOf = new RightSideViewOfBT();
+            TreeNode root = new TreeNode(1);
+           
+            root.right = new TreeNode(3);
+            root.right.right = new TreeNode(5);
+            root.right.right.left = new TreeNode(6);
+            root.right.right.right = new TreeNode(7);
+            rightSideViewOf.RightSideView(root);
+        }
+
+        private static void PopulateNextRightPointersDriverCode()
+        {
+            PopulateNextRightPointers populateNextRightPointers = new PopulateNextRightPointers();
+            Node node = new Node(1);
+            node.left = new Node(2);
+            node.right = new Node(3);
+            node.left.left = new Node(4);
+            node.left.right = new Node(5);
+            node.right.left = new Node(6);
+            node.right.right = new Node(7);
+            populateNextRightPointers.Connect(node);
+        }
+
+        private static void MinDepthClassDriverCode()
+        {
+            TreeNode root = new TreeNode(3);
+            root.left = new TreeNode(9);
+            root.right = new TreeNode(20);
+            root.right.left = new TreeNode(15);
+            root.right.right = new TreeNode(7);
+            
+            MinDepthClass minDepthClass = new MinDepthClass();
+            minDepthClass.MinDepth(root);
+        }
+
+        private static void PathSumDriverCode()
+        {
+            PathSum pathSum = new PathSum();
+            TreeNode root = new TreeNode(1);
+            root.left = new TreeNode(2);
+            pathSum.HasPathSum(root, 1);
         }
 
         private static void BalancedBTDriverCode()

@@ -10,8 +10,43 @@ namespace Graphs
            //NumberOfConnectedNodesInUnconnectedgraphDriverCode();
             //TownJudgeDriverCode();
             //CloneGraphsDriverCOde();
-            RouteBetweenTwoNodesDriverCode();
+           //RouteBetweenTwoNodesDriverCode();
+            pathUnweightedDriverCode();
         }
+
+        private static void pathUnweightedDriverCode()
+        {
+            pathUnweighted pathUnweight = new pathUnweighted();
+                // No of vertices
+                int v = 8;
+
+                // Adjacency list for storing
+                // which vertices are connected
+                List<List<int>> adj =
+                            new List<List<int>>(v);
+
+                for (int i = 0; i < v; i++)
+                {
+                    adj.Add(new List<int>());
+                }
+
+         
+            pathUnweight.addEdge(adj, 0, 1);
+            pathUnweight.addEdge(adj, 0, 3);
+            pathUnweight.addEdge(adj, 1, 2);
+            pathUnweight.addEdge(adj, 3, 4);
+            pathUnweight.addEdge(adj, 3, 7);
+            pathUnweight.addEdge(adj, 4, 5);
+            pathUnweight.addEdge(adj, 4, 6);
+            pathUnweight.addEdge(adj, 4, 7);
+            pathUnweight.addEdge(adj, 5, 6);
+            pathUnweight.addEdge(adj, 6, 7);
+                int source = 1, dest = 3;
+            pathUnweight.printShortestDistance(adj, source,
+                                        dest, v);
+            
+        }
+
         private static void RouteBetweenTwoNodesDriverCode()
         {
             int[][] edges = new int[4][];
