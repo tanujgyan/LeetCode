@@ -18,7 +18,21 @@ namespace Binary_Tree
             //PathSumDriverCode();
            // MinDepthClassDriverCode();
             //PopulateNextRightPointersDriverCode();
-            RightSideViewOfBTDriverCode();
+            //RightSideViewOfBTDriverCode();
+            InvertBTDriverCode();
+        }
+
+        private static void InvertBTDriverCode()
+        {
+            InvertBT invertBT = new InvertBT();
+            TreeNode treeNode = new TreeNode(1);
+            treeNode.left = new TreeNode(2);
+            treeNode.right = new TreeNode(3);
+            treeNode.left.left = new TreeNode(4);
+            treeNode.left.right = new TreeNode(5);
+            treeNode.right.left = new TreeNode(6);
+            //treeNode.right.right = new TreeNode(7);
+            invertBT.InvertTree(treeNode);
         }
 
         private static void RightSideViewOfBTDriverCode()
