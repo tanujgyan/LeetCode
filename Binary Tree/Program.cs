@@ -19,7 +19,18 @@ namespace Binary_Tree
            // MinDepthClassDriverCode();
             //PopulateNextRightPointersDriverCode();
             //RightSideViewOfBTDriverCode();
-            InvertBTDriverCode();
+            //InvertBTDriverCode();
+            KthSmallestElementInBSTDriverCode();
+        }
+
+        private static void KthSmallestElementInBSTDriverCode()
+        {
+            KthSmallestElementInBST kthSmallestElementInBST = new KthSmallestElementInBST();
+            TreeNode root = new TreeNode(3);
+            root.left = new TreeNode(1);
+            root.right = new TreeNode(4);
+            root.left.right = new TreeNode(2);
+            kthSmallestElementInBST.KthSmallest(root,1);
         }
 
         private static void InvertBTDriverCode()
