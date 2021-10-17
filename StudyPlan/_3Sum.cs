@@ -7,12 +7,12 @@ namespace StudyPlan
     //Time complexity will be O(nlogn)+O(n2)=O(n2)
     class _3Sum
     {
-        Dictionary<int, List<int>> dict = new Dictionary<int, List<int>>();
+       
         public IList<IList<int>> ThreeSum(int[] nums)
         {
             IList<IList<int>> result = new List<IList<int>>();
             Array.Sort(nums); //O(nlogn)
-            //CreateDictionary(nums);
+          
             
             for (int i = 0; i < nums.Length-1; i++) //this for loop will run n times
             {
@@ -71,20 +71,5 @@ namespace StudyPlan
             return result;
         }
 
-        public void CreateDictionary(int[] nums)
-        {
-            for (int i = 0; i < nums.Length; i++)
-            {
-                if (dict.ContainsKey(nums[i]))
-                {
-                    dict[nums[i]].Add(i);
-                }
-                else
-                {
-                    dict.Add(nums[i], new List<int> { i });
-                }
-            }
-
-        }
     }
 }
